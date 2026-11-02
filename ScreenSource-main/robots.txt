@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+
+# Prevent crawlers from triggering Cloudflare email obfuscation 404
+Disallow: /cdn-cgi/
+
+# Prevent crawlers from triggering 429 rate-limiting on external WhatsApp API
+Disallow: /*?text=*
+Disallow: /*?phone=*
+
+Sitemap: https://screensourceindia.com/sitemap.xml

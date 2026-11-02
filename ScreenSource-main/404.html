@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="refresh" content="0; url=index.html">
+  <meta name="robots" content="index, follow" />
+  <meta name="revisit-after" content="7 days" />
+  <title>Redirecting to Screensource...</title>
+  <script>
+    var currentPath = window.location.pathname;
+    if (window.location.protocol === 'file:') {
+      window.location.replace('index.html');
+    } else {
+      var target = '/index.html';
+      if (currentPath.indexOf('/ScreenSource-main/') !== -1) {
+        target = '/ScreenSource-main/index.html';
+      }
+      window.location.replace(target);
+    }
+  </script>
+</head>
+<body style="margin:0; background:#ffffff;">
+</body>
+</html>

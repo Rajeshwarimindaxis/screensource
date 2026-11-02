@@ -1,0 +1,1443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="robots" content="index, follow" />
+  <meta name="revisit-after" content="7 days" />
+  <title>NovaLife Specialty Printing Media - Screensource</title>
+  <link rel="icon" type="image/webp" href="images/logo-final.webp">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #ffffff;
+      color: #0f172a;
+      overflow-x: hidden;
+    }
+
+    .section-padding {
+      padding: 70px 24px;
+    }
+    .bg-white {
+      background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+      border-bottom: 1px solid #e2e8f0;
+    }
+    .bg-light {
+      background: linear-gradient(180deg, #f8fafc 0%, #f1f5f9 100%);
+      border-bottom: 1px solid #e2e8f0;
+    }
+
+    .section-subtitle-badge {
+      color: #ed1607;
+      background: #fef2f2;
+      border: 1px solid #fee2e2;
+      font-size: 0.82rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      padding: 6px 18px;
+      border-radius: 30px;
+      display: inline-block;
+      margin-bottom: 12px;
+      box-shadow: 0 2px 8px rgba(237, 22, 7, 0.06);
+    }
+    .section-title {
+      font-family: 'Poppins', sans-serif;
+      font-size: clamp(1.8rem, 4vw, 2.5rem);
+      font-weight: 800;
+      color: #0f172a !important;
+      -webkit-text-fill-color: #0f172a !important;
+      text-align: center;
+      margin-bottom: 16px;
+      position: relative;
+      padding-bottom: 12px;
+    }
+    .section-title::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 50px;
+      height: 3px;
+      background: #ed1607;
+      border-radius: 3px;
+    }
+    .brand-red-text {
+      color: #ed1607 !important;
+      -webkit-text-fill-color: #ed1607 !important;
+      background: none !important;
+    }
+    .section-subtitle {
+      font-size: 1.05rem;
+      color: #64748b !important;
+      -webkit-text-fill-color: #64748b !important;
+      text-align: center;
+      max-width: 780px;
+      margin: 14px auto 44px;
+      line-height: 1.6;
+    }
+
+    /* Hero Section */
+    .specialty-hero {
+      padding-top: 140px !important;
+      padding-bottom: 40px;
+      background: linear-gradient(135deg, #0b0e14 0%, #1e293b 100%);
+      color: #ffffff;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      border-radius: 0 0 20px 20px;
+    }
+    .specialty-hero h1 {
+      font-size: clamp(1.8rem, 4vw, 2.6rem);
+      font-weight: 800;
+      color: #ffffff !important;
+      -webkit-text-fill-color: #ffffff !important;
+      margin-bottom: 14px;
+    }
+    .specialty-hero p {
+      font-size: 1.05rem;
+      color: #cbd5e1 !important;
+      -webkit-text-fill-color: #cbd5e1 !important;
+      max-width: 820px;
+      margin: 0 auto 24px;
+      line-height: 1.65;
+    }
+
+    /* Slider Section */
+    .specialty-slider-section {
+      padding: 60px 24px;
+      background: #ffffff;
+      border-bottom: 1px solid #e2e8f0;
+    }
+    .slider-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      max-width: 1200px;
+      margin: 0 auto;
+      position: relative;
+    }
+    .slider-container {
+      display: flex;
+      gap: 16px;
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+      padding: 20px 0;
+      flex: 1;
+    }
+    .slider-card {
+      background: #ffffff;
+      border-radius: 20px;
+      min-width: 340px;
+      max-width: 380px;
+      height: 340px;
+      flex-shrink: 0;
+      overflow: hidden;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.07);
+      border: 1px solid #e2e8f0;
+      border-top: none;
+      display: flex;
+      flex-direction: column;
+      transition: all 0.35s ease;
+    }
+    .slider-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 18px 36px rgba(237,22,7,0.18);
+      border-color: #ed1607;
+    }
+    .slider-img-wrapper {
+      width: 100%;
+      height: 260px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 16px;
+      background: #ffffff;
+    }
+    .slider-img-wrapper img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+      display: block;
+      transition: transform 0.4s ease;
+    }
+    .slider-card:hover .slider-img-wrapper img {
+      transform: scale(1.08);
+    }
+    .slider-card-caption {
+      padding: 14px 16px;
+      background: #f8fafc;
+      border-top: 1px solid #f1f5f9;
+      text-align: center;
+      margin-top: auto;
+    }
+    .slider-card-caption p {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: #0f172a !important;
+      -webkit-text-fill-color: #0f172a !important;
+      margin: 0;
+    }
+    .nav-btn {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      color: #0f172a;
+      font-size: 1.6rem;
+      width: 46px;
+      height: 46px;
+      border-radius: 50%;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+      z-index: 10;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .nav-btn:hover {
+      background: #ed1607;
+      color: #ffffff;
+      border-color: #ed1607;
+    }
+    .dots-container {
+      text-align: center;
+      margin-top: 15px;
+    }
+    .dots-container span {
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      background: #cbd5e1;
+      border-radius: 50%;
+      margin: 0 4px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    .dots-container span.active {
+      background: #ed1607;
+      width: 22px;
+      border-radius: 10px;
+    }
+
+    /* PDF Brochure Cards */
+    .pdf-card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 24px;
+      max-width: 1150px;
+      margin: 0 auto;
+    }
+    .pdf-card {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-top: none;
+      border-radius: 16px;
+      padding: 28px 24px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.04);
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      transition: all 0.3s ease;
+    }
+    .pdf-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 14px 28px rgba(237,22,7,0.12);
+      border-color: #ed1607;
+    }
+    .pdf-icon {
+      font-size: 2.2rem;
+      color: #ed1607;
+      margin-bottom: 14px;
+    }
+    .pdf-card h3 {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: #0f172a !important;
+      -webkit-text-fill-color: #0f172a !important;
+      margin-bottom: 10px;
+    }
+    .pdf-card p {
+      font-size: 0.92rem;
+      color: #64748b !important;
+      -webkit-text-fill-color: #64748b !important;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+    .pdf-btn {
+      margin-top: auto;
+      display: inline-block;
+      padding: 10px 22px;
+      background: #ed1607;
+      color: #ffffff !important;
+      -webkit-text-fill-color: #ffffff !important;
+      font-weight: 700;
+      font-size: 0.9rem;
+      border-radius: 30px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+    .pdf-btn:hover {
+      background: #cc1205;
+      box-shadow: 0 4px 12px rgba(237,22,7,0.3);
+    }
+
+    /* Feature Cards */
+    .specialty-range-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 28px;
+      max-width: 1150px;
+      margin: 0 auto;
+    }
+    .specialty-card {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-top: none;
+      border-radius: 16px;
+      padding: 32px 28px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+      transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+      display: flex;
+      flex-direction: column;
+    }
+    .specialty-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 16px 32px rgba(237, 22, 7, 0.14);
+      border-color: #ed1607;
+    }
+    .specialty-card-icon {
+      width: 54px;
+      height: 54px;
+      border-radius: 14px;
+      background: #fef2f2;
+      border: 1px solid #fee2e2;
+      color: #ed1607 !important;
+      -webkit-text-fill-color: #ed1607 !important;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem;
+      margin-bottom: 20px;
+      transition: transform 0.3s ease;
+    }
+    .specialty-card:hover .specialty-card-icon {
+      transform: scale(1.12);
+      background: #ed1607;
+      color: #ffffff !important;
+      -webkit-text-fill-color: #ffffff !important;
+    }
+    .specialty-card h3 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #0f172a !important;
+      -webkit-text-fill-color: #0f172a !important;
+      margin-bottom: 12px;
+    }
+    .specialty-card p {
+      font-size: 0.96rem;
+      color: #475569 !important;
+      -webkit-text-fill-color: #475569 !important;
+      line-height: 1.65;
+      margin-bottom: 18px;
+    }
+    .specialty-item-list {
+      list-style: none;
+      padding: 0;
+      margin-top: auto;
+    }
+    .specialty-item-list li {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-left: 4px solid #ed1607;
+      border-radius: 10px;
+      padding: 14px 16px;
+      margin-bottom: 12px;
+      font-size: 0.92rem;
+      line-height: 1.55;
+      color: #334155 !important;
+      -webkit-text-fill-color: #334155 !important;
+      transition: all 0.25s ease;
+    }
+    .specialty-item-list li:hover {
+      background: #fff5f5;
+      transform: translateX(4px);
+    }
+    .specialty-item-list li strong {
+      color: #ed1607 !important;
+      -webkit-text-fill-color: #ed1607 !important;
+      font-weight: 700;
+    }
+
+    @media (max-width: 768px) {
+      .slider-card {
+        min-width: 100% !important;
+        max-width: 100% !important;
+      }
+      .specialty-hero {
+        padding-top: 130px !important;
+      }
+    }
+  
+      /* Integrated Hero Breadcrumb - Premium Glassmorphism Pill Design */
+  .hero-breadcrumb {
+    margin-bottom: 22px;
+    display: flex;
+    justify-content: flex-start;
+    position: relative;
+    z-index: 5;
+  }
+  .brands-hero .hero-breadcrumb,
+  .machines-hero .hero-breadcrumb,
+  .services-hero .hero-breadcrumb,
+  .machine-hero .hero-breadcrumb,
+  .hero-section .hero-breadcrumb,
+  .hero-exposing-compact .hero-breadcrumb,
+  .hero .hero-breadcrumb,
+  .three-m-hero .hero-breadcrumb,
+  .avery-hero .hero-breadcrumb,
+  .orafol-hero .hero-breadcrumb,
+  .technova-hero .hero-breadcrumb,
+  .poly-hero .hero-breadcrumb,
+  .yessor-hero .hero-breadcrumb,
+  .printcolor-hero .hero-breadcrumb,
+  .sunsui-hero .hero-breadcrumb,
+  .nittoku-hero .hero-breadcrumb,
+  .nitto-hero .hero-breadcrumb,
+  .nontear-hero .hero-breadcrumb,
+  .synthetic-hero .hero-breadcrumb,
+  .specialty-hero .hero-breadcrumb,
+  .signage-hero .hero-breadcrumb,
+  .stretching-hero .hero-breadcrumb,
+  .contact-hero .hero-breadcrumb,
+  #contact-us .hero-breadcrumb {
+    justify-content: center;
+  }
+  .hero-breadcrumb ol {
+    display: inline-flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    list-style: none;
+    padding: 7px 18px;
+    margin: 0;
+    font-size: 0.85rem;
+    font-weight: 500;
+    font-family: 'Poppins', sans-serif;
+    background: rgba(11, 17, 32, 0.85);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border: 1.5px solid rgba(0, 174, 239, 0.45);
+    border-radius: 50px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35), 0 0 16px rgba(0, 174, 239, 0.18);
+  }
+  .hero-breadcrumb li {
+    display: inline-flex;
+    align-items: center;
+  }
+  .hero-breadcrumb a {
+    color: #f1f5f9 !important;
+    -webkit-text-fill-color: #f1f5f9 !important;
+    text-decoration: none;
+    transition: all 0.25s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-weight: 500;
+    padding: 2px 6px;
+    border-radius: 4px;
+  }
+  .hero-breadcrumb a i.fa-home {
+    color: #00AEEF;
+    font-size: 0.92rem;
+    transition: transform 0.2s ease, color 0.2s ease;
+  }
+  .hero-breadcrumb a:hover {
+    color: #38bdf8 !important;
+    -webkit-text-fill-color: #38bdf8 !important;
+    text-decoration: none;
+    transform: translateY(-1px);
+  }
+  .hero-breadcrumb a:hover i.fa-home {
+    transform: scale(1.15);
+    color: #38bdf8;
+  }
+  .hero-breadcrumb .separator {
+    color: rgba(0, 174, 239, 0.75);
+    font-size: 0.62rem;
+    display: inline-flex;
+    align-items: center;
+    margin: 0 1px;
+  }
+  .hero-breadcrumb .current {
+    color: #00e5ff !important;
+    -webkit-text-fill-color: #00e5ff !important;
+    font-weight: 600;
+    background: rgba(0, 174, 239, 0.18);
+    padding: 3px 12px;
+    border-radius: 30px;
+    border: 1px solid rgba(0, 174, 239, 0.35);
+    box-shadow: 0 2px 8px rgba(0, 174, 239, 0.2);
+    letter-spacing: 0.2px;
+  }
+  #contact-us .hero-breadcrumb ol {
+    background: rgba(255, 255, 255, 0.95);
+    border: 1.5px solid rgba(0, 174, 239, 0.45);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08), 0 0 14px rgba(0, 174, 239, 0.18);
+  }
+  #contact-us .hero-breadcrumb a {
+    color: #1e293b !important;
+    -webkit-text-fill-color: #1e293b !important;
+  }
+  #contact-us .hero-breadcrumb a:hover {
+    color: #00AEEF !important;
+    -webkit-text-fill-color: #00AEEF !important;
+  }
+  #contact-us .hero-breadcrumb a i.fa-home {
+    color: #00AEEF;
+  }
+  #contact-us .hero-breadcrumb .separator {
+    color: #00AEEF;
+    opacity: 0.85;
+  }
+  #contact-us .hero-breadcrumb .current {
+    color: #0284c7 !important;
+    -webkit-text-fill-color: #0284c7 !important;
+    background: rgba(0, 174, 239, 0.12);
+    border: 1px solid rgba(0, 174, 239, 0.35);
+    box-shadow: 0 2px 8px rgba(0, 174, 239, 0.15);
+  }
+  .ss-breadcrumb-nav {
+    display: none !important;
+  }
+
+    /* ===================================================
+       LOCATION DROPDOWN ACCORDION SECTION (FluidTech Style)
+    =================================================== */
+    .location-dropdown-section {
+      padding: 20px 20px 60px 20px;
+      width: 100%;
+      box-sizing: border-box;
+      background: #f8fafc;
+    }
+
+    .location-accordion-container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .location-accordion-wrapper {
+      width: 100%;
+      margin: 0 auto;
+      border-radius: 50px;
+      transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .location-toggle-bar {
+      width: 100%;
+      background: linear-gradient(135deg, #0077b6 0%, #00AEEF 100%);
+      color: #ffffff;
+      border: none;
+      outline: none;
+      border-radius: 50px;
+      padding: 14px 28px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      cursor: pointer;
+      box-shadow: 0 6px 22px rgba(0, 174, 239, 0.25);
+      transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .location-toggle-bar:hover {
+      background: linear-gradient(135deg, #006296 0%, #009ad4 100%);
+      box-shadow: 0 8px 26px rgba(0, 174, 239, 0.35);
+    }
+
+    .location-accordion-wrapper.open .location-toggle-bar {
+      border-radius: 18px 18px 0 0;
+      box-shadow: 0 4px 15px rgba(0, 174, 239, 0.2);
+    }
+
+    .location-bar-title {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .location-icon-badge {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.22);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+      color: #ffffff;
+      backdrop-filter: blur(4px);
+    }
+
+    .location-text {
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.18rem;
+      font-weight: 700;
+      letter-spacing: 0.4px;
+      color: #ffffff;
+    }
+
+    .location-btn-badge {
+      background: rgba(255, 255, 255, 0.2);
+      border: 1px solid rgba(255, 255, 255, 0.35);
+      color: #ffffff;
+      padding: 6px 20px;
+      border-radius: 50px;
+      font-size: 0.88rem;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      backdrop-filter: blur(4px);
+      transition: all 0.25s ease;
+    }
+
+    .location-toggle-bar:hover .location-btn-badge {
+      background: rgba(255, 255, 255, 0.3);
+      border-color: rgba(255, 255, 255, 0.5);
+    }
+
+    .location-content-panel {
+      display: none;
+      background: #ffffff;
+      border: 1px solid #E2E8F0;
+      border-top: none;
+      border-radius: 0 0 18px 18px;
+      padding: 28px 24px;
+      box-shadow: 0 14px 35px rgba(7, 27, 47, 0.08);
+      box-sizing: border-box;
+    }
+
+    .location-accordion-wrapper.open .location-content-panel {
+      display: block;
+      animation: locPanelSlideDown 0.35s ease-out;
+    }
+
+    @keyframes locPanelSlideDown {
+      from { opacity: 0; transform: translateY(-8px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .location-card {
+      background: #ffffff;
+      border: 1px solid #E2E8F0;
+      border-radius: 16px;
+      padding: 24px 28px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+      transition: all 0.3s ease;
+    }
+
+    .location-card:hover {
+      border-color: #CBD5E1;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+    }
+
+    .location-card-header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.2rem;
+      font-weight: 800;
+      color: #0077b6;
+      letter-spacing: 1px;
+      margin-bottom: 22px;
+      padding-bottom: 14px;
+      border-bottom: 2px solid #E2E8F0;
+    }
+
+    .location-card-header i {
+      color: #00AEEF;
+      font-size: 1.15rem;
+    }
+
+    .location-columns-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px 24px;
+    }
+
+    .location-links-col {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .location-link-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 9px 12px;
+      border-radius: 8px;
+      text-decoration: none;
+      color: #334155;
+      font-size: 0.91rem;
+      font-weight: 500;
+      transition: all 0.2s ease;
+      background: transparent;
+      border: 1px solid transparent;
+      box-sizing: border-box;
+    }
+
+    .loc-link-left {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      line-height: 1.35;
+    }
+
+    .loc-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #00AEEF;
+      flex-shrink: 0;
+      transition: transform 0.22s ease, background-color 0.22s ease;
+    }
+
+    .loc-arrow {
+      color: #94A3B8;
+      font-size: 0.82rem;
+      flex-shrink: 0;
+      margin-left: 8px;
+      transition: transform 0.22s ease, color 0.22s ease;
+    }
+
+    .location-link-item:hover {
+      background: #EFF6FF;
+      color: #0077b6;
+      border-color: #BAE6FD;
+      font-weight: 600;
+      transform: translateX(2px);
+    }
+
+    .location-link-item:hover .loc-dot {
+      background: #0077b6;
+      transform: scale(1.35);
+    }
+
+    .location-link-item:hover .loc-arrow {
+      color: #00AEEF;
+      transform: translateX(4px);
+    }
+
+    .location-link-item.active-location-link {
+      color: #0077b6 !important;
+      font-weight: 700 !important;
+      background: #EFF6FF !important;
+      border-color: #00AEEF !important;
+    }
+
+    .location-link-item.active-location-link .loc-dot {
+      background: #0077b6 !important;
+      transform: scale(1.35);
+    }
+
+    .location-link-item.active-location-link .loc-arrow {
+      color: #00AEEF !important;
+    }
+
+    @media (max-width: 1024px) {
+      .location-columns-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px 20px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .location-toggle-bar {
+        padding: 10px 18px;
+      }
+      .location-text {
+        font-size: 1.05rem;
+      }
+      .location-btn-badge {
+        padding: 5px 14px;
+        font-size: 0.8rem;
+      }
+      .location-content-panel {
+        padding: 18px 14px;
+      }
+      .location-card {
+        padding: 16px 14px;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .location-columns-grid {
+        grid-template-columns: 1fr;
+        gap: 6px;
+      }
+      .location-link-item {
+        padding: 8px 8px;
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- Header Navigation -->
+  <script src="navbar.js?v=2.0"></script>
+
+<!-- 1. HERO SECTION -->
+  <section class="specialty-hero">
+    <div class="container" style="max-width: 1000px; margin: 0 auto; padding: 0 20px;">
+    <nav class="hero-breadcrumb" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+        <li class="separator"><i class="fas fa-chevron-right"></i></li>
+        <li class="current" aria-current="page">NovaLife Specialty Media</li>
+      </ol>
+    </nav>
+
+      <div style="text-align: center;">
+        <span class="section-subtitle-badge" style="background: rgba(237,22,7,0.15); border-color: rgba(237,22,7,0.4); color: #ff4d4d; -webkit-text-fill-color: #ff4d4d;">Specialty Digital & Backlit Substrates</span>
+      </div>
+      <h1>NovaLife <span class="brand-red-text">Specialty Printing Media</span></h1>
+      <p>High-performance PET and gloss art media engineered for backlit displays, silver metallic photo albums, optical clear overlays, and luxury graphic applications.</p>
+    </div>
+  </section>
+
+  <!-- 2. PRODUCT SLIDER SECTION -->
+  <section class="specialty-slider-section">
+    <div style="text-align: center;">
+      <span class="section-subtitle-badge">Visual Catalog</span>
+    </div>
+    <h2 class="section-title">Specialty Media <span class="brand-red-text">Product Gallery</span></h2>
+    <p class="section-subtitle">Browse our stocked range of NovaLife backlit PET, silver metallic, and clear optical films.</p>
+
+    <div class="slider-wrapper">
+      <button id="leftBtn" class="nav-btn">&#10094;</button>
+
+      <div id="sliderContainer" class="slider-container">
+        <div class="slider-card">
+          <div class="slider-img-wrapper"><img src="speciality-media/0004477-novalife-backlit-pet-190-ss-lmb-5708.webp" alt="NovaLife Backlit PET 190 SS" loading="lazy" decoding="async"></div>
+          <div class="slider-card-caption"><p>NovaLife Backlit PET 190 SS</p></div>
+        </div>
+
+        <div class="slider-card">
+          <div class="slider-img-wrapper"><img src="speciality-media/0004457-pnovalife-silver-metallic-pet-125-ds-lsm-5705p.webp" alt="NovaLife Silver Metallic PET 125 DS" loading="lazy" decoding="async"></div>
+          <div class="slider-card-caption"><p>NovaLife Silver Metallic PET 125 DS</p></div>
+        </div>
+
+        <div class="slider-card">
+          <div class="slider-img-wrapper"><img src="speciality-media/0005774-novalife-clarus-pet-125-ss-clarus-125-550-1.webp" alt="NovaLife Clarus PET 125 SS" loading="lazy" decoding="async"></div>
+          <div class="slider-card-caption"><p>NovaLife Clarus Glossy Clear PET 125 SS</p></div>
+        </div>
+
+        <div class="slider-card">
+          <div class="slider-img-wrapper"><img src="speciality-media/0004514-novalife-translucent-pet-110-ds-lmt-5104.webp" alt="NovaLife Translucent PET 110 DS" loading="lazy" decoding="async"></div>
+          <div class="slider-card-caption"><p>NovaLife Translucent PET 110 DS</p></div>
+        </div>
+
+        <div class="slider-card">
+          <div class="slider-img-wrapper"><img src="speciality-media/0003931-novalife-matte-pet-115-ds-lmo-5504.webp" alt="NovaLife Matte PET 115 DS" loading="lazy" decoding="async"></div>
+          <div class="slider-card-caption"><p>NovaLife Matte PET 115 DS</p></div>
+        </div>
+      </div>
+
+      <button id="rightBtn" class="nav-btn">&#10095;</button>
+    </div>
+
+    <div id="dots" class="dots-container"></div>
+  </section>
+
+  <!-- 3. DOWNLOADABLE BROCHURES SECTION -->
+  <section class="section-padding bg-white">
+    <div class="container" style="max-width: 1200px; margin: 0 auto;">
+      <div style="text-align: center;">
+        <span class="section-subtitle-badge">Technical Data Sheets</span>
+      </div>
+      <h2 class="section-title">Downloadable <span class="brand-red-text">Product Brochures</span></h2>
+      <p class="section-subtitle">Access detailed technical specs and datasheets for NovaLife Specialty Media.</p>
+
+      <div class="pdf-card-grid">
+        <div class="pdf-card">
+          <div class="pdf-icon"><i class="fas fa-lightbulb"></i></div>
+          <h3>NovaLife Backlit PET 190 SS</h3>
+          <p>Backlit PET media for vibrant photo prints with rich contrast and sharp backlit display performance.</p>
+          <a href="ALL_PDF/NovaLife Backlit PET 190 SS - Brochure.pdf" target="_blank" class="pdf-btn">View Datasheet</a>
+        </div>
+
+        <div class="pdf-card">
+          <div class="pdf-icon"><i class="fas fa-eye"></i></div>
+          <h3>NovaLife Clarus PET 125 SS</h3>
+          <p>Glossy ultra-clear PET film for optical depth, window graphics, and high-definition photo prints.</p>
+          <a href="ALL_PDF/NovaLife Clarus PET 125 SS - Brochure.pdf" target="_blank" class="pdf-btn">View Datasheet</a>
+        </div>
+
+        <div class="pdf-card">
+          <div class="pdf-icon"><i class="fas fa-layer-group"></i></div>
+          <h3>NovaLife Clarus PET 180 SS</h3>
+          <p>Heavyweight clear PET for superior rigidity, transparency, and architectural display graphics.</p>
+          <a href="ALL_PDF/NovaLife Clarus PET 180 SS - Brochure.pdf" target="_blank" class="pdf-btn">View Datasheet</a>
+        </div>
+
+        <div class="pdf-card">
+          <div class="pdf-icon"><i class="fas fa-square"></i></div>
+          <h3>NovaLife Opacus 285</h3>
+          <p>High-opacity non-tear PET media engineered for double-sided photo prints without show-through.</p>
+          <a href="ALL_PDF/NovaLife Opacus 285 - Brochure.pdf" target="_blank" class="pdf-btn">View Datasheet</a>
+        </div>
+
+        <div class="pdf-card">
+          <div class="pdf-icon"><i class="fas fa-gem"></i></div>
+          <h3>NovaLife Silver Metallic PET</h3>
+          <p>Reflective silver metallic PET media (125 DS) for luxury photo albums and metallic graphics.</p>
+          <a href="ALL_PDF/NovaLife Silver Metallic PET 125 DS - Brochure.pdf" target="_blank" class="pdf-btn">View Datasheet</a>
+        </div>
+
+        <div class="pdf-card">
+          <div class="pdf-icon"><i class="fas fa-sun"></i></div>
+          <h3>NovaLife Translucent PET</h3>
+          <p>Soft-diffusion translucent PET film (110 DS) ideal for soft backlighting and artistic displays.</p>
+          <a href="ALL_PDF/NovaLife Translucent PET 110 DS - Brochure.pdf" target="_blank" class="pdf-btn">View Datasheet</a>
+        </div>
+
+        <div class="pdf-card">
+          <div class="pdf-icon"><i class="fas fa-file-alt"></i></div>
+          <h3>NovaLife Gloss Art Paper 170 DS</h3>
+          <p>Vivid gloss finish art paper for high-definition digital photo printing and commercial collaterals.</p>
+          <a href="ALL_PDF/NovaLife Gloss Art Paper 170 DS - Brochure.pdf" target="_blank" class="pdf-btn">View Datasheet</a>
+        </div>
+
+        <div class="pdf-card">
+          <div class="pdf-icon"><i class="fas fa-newspaper"></i></div>
+          <h3>NovaLife Gloss Art Paper 200 DS</h3>
+          <p>Heavyweight 200 GSM gloss art paper (LGAP 200) for premium coffee table books and photo albums.</p>
+          <a href="ALL_PDF/NovaLife Gloss Art Paper 200 DS ( LGAP 200 ) - Brochure.pdf" target="_blank" class="pdf-btn">View Datasheet</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. TECHNICAL FEATURES & SPECIFICATIONS -->
+  <section class="section-padding bg-light">
+    <div class="container" style="max-width: 1200px; margin: 0 auto;">
+      <div style="text-align: center;">
+        <span class="section-subtitle-badge">Material Performance</span>
+      </div>
+      <h2 class="section-title">Technical <span class="brand-red-text">Key Features</span></h2>
+      <p class="section-subtitle">Designed for specialty print applications requiring high optical clarity, light diffusion, and metallic visual depth.</p>
+
+      <div class="specialty-range-grid">
+        <div class="specialty-card">
+          <div class="specialty-card-icon"><i class="fas fa-lightbulb"></i></div>
+          <h3>Uniform Light Diffusion & Backlit Clarity</h3>
+          <p>NovaLife Backlit PET and Translucent films ensure smooth light transmission without LED hot spots or graininess.</p>
+          <ul class="specialty-item-list">
+            <li><strong>Even Backlight Transmission:</strong> Micro-porous coating scatters LED backlighting evenly for crisp image depth.</li>
+            <li><strong>High Color Density:</strong> Accepts solvent, eco-solvent, UV, and latex inks for deep blacks and rich colors.</li>
+            <li><strong>Heat & Humidity Resistance:</strong> PET base stays dimensionally flat inside illuminated lightbox frames.</li>
+          </ul>
+        </div>
+
+        <div class="specialty-card">
+          <div class="specialty-card-icon"><i class="fas fa-sparkles"></i></div>
+          <h3>Metallic & Optical Clear Effects</h3>
+          <p>Silver Metallic PET and Clarus Clear PET substrates add luxury metallic sheen and crystal-clear optical transparency.</p>
+          <ul class="specialty-item-list">
+            <li><strong>Reflective Silver Finish:</strong> Enhances metallic accents in luxury packaging and photo portfolios.</li>
+            <li><strong>Crystal-Clear Optical Base:</strong> Clarus PET provides 99%+ optical transparency for window overlays.</li>
+            <li><strong>Scratch & Tear Protection:</strong> Tough polyester base guards graphics against surface abrasion.</li>
+          </ul>
+        </div>
+
+        <div class="specialty-card">
+          <div class="specialty-card-icon"><i class="fas fa-book-open"></i></div>
+          <h3>Premium Gloss Art & Opacus Papers</h3>
+          <p>Gloss Art Papers (170/200 DS) and Opacus 285 for high-contrast, dual-sided photo book printing.</p>
+          <ul class="specialty-item-list">
+            <li><strong>100% Opacity (Opacus 285):</strong> Opaque core prevents double-sided print bleed-through completely.</li>
+            <li><strong>Ultra-Smooth Gloss Finish:</strong> Reproduces fine photographic details with photographic gloss luster.</li>
+            <li><strong>Archival Longevity:</strong> Acid-free formulation preserves album pages against atmospheric aging.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modern Dark Footer -->
+  <style>
+    .modern-footer {
+      background-color: #0B0E14;
+      color: #e0e0e0;
+      padding: 80px 20px 40px;
+      font-family: 'Poppins', sans-serif;
+      position: relative;
+      border-top: none;
+    }
+    .modern-footer-container {
+      max-width: 1200px;
+      margin: auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 50px;
+    }
+    .modern-footer .brand-title {
+      font-size: 28px;
+      font-weight: 800;
+      margin: 0 0 15px 0;
+      letter-spacing: 0.5px;
+      color: #ffffff !important;
+      -webkit-text-fill-color: #ffffff !important;
+    }
+    .modern-footer p {
+      font-size: 15px;
+      line-height: 1.7;
+      margin: 0 0 20px 0;
+      color: #a0aab2 !important;
+      -webkit-text-fill-color: #a0aab2 !important;
+    }
+    .modern-footer h4 {
+      margin-bottom: 25px;
+      font-size: 18px;
+      color: #ffffff !important;
+      -webkit-text-fill-color: #ffffff !important;
+      font-weight: 600;
+      position: relative;
+      padding-bottom: 10px;
+    }
+    .modern-footer h4::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 40px;
+      height: 3px;
+      background: #ed1607;
+      border-radius: 2px;
+    }
+    .modern-footer ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .modern-footer ul li {
+      margin-bottom: 12px;
+    }
+    .modern-footer ul li a {
+      color: #a0aab2 !important;
+      -webkit-text-fill-color: #a0aab2 !important;
+      text-decoration: none;
+      font-size: 15px;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .modern-footer ul li a:hover {
+      color: #ed1607 !important;
+      -webkit-text-fill-color: #ed1607 !important;
+      transform: translateX(5px);
+    }
+    .footer-socials {
+      display: flex;
+      gap: 15px;
+    }
+    .footer-socials a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      background: rgba(255,255,255,0.05);
+      color: #ffffff !important;
+      -webkit-text-fill-color: #ffffff !important;
+      border-radius: 50%;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      font-size: 18px;
+    }
+    .footer-socials a:hover {
+      background: #ed1607;
+      transform: translateY(-3px);
+    }
+
+    .google-review-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: #ffffff;
+      color: #202124 !important;
+      padding: 9px 18px;
+      border-radius: 50px;
+      text-decoration: none !important;
+      font-size: 13px;
+      font-weight: 600;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+      transition: all 0.3s ease;
+      margin-top: 10px;
+      margin-bottom: 8px;
+    }
+
+    .google-review-btn:hover {
+      background: #f8f9fa;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(0, 174, 239, 0.4);
+      color: #00AEEF !important;
+    }
+
+    .google-review-btn .google-icon {
+      font-size: 15px;
+      color: #4285F4;
+    }
+
+    .google-review-btn .stars-mini {
+      color: #FBBC05;
+      font-size: 11px;
+      display: flex;
+      gap: 2px;
+    }
+
+    .footer-contact-item {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      margin-bottom: 15px;
+      color: #a0aab2 !important;
+      -webkit-text-fill-color: #a0aab2 !important;
+      font-size: 15px;
+      line-height: 1.6;
+    }
+    .footer-contact-item i {
+      color: #ed1607 !important;
+      -webkit-text-fill-color: #ed1607 !important;
+      font-size: 18px;
+      margin-top: 3px;
+    }
+    .footer-bottom {
+      text-align: center;
+      padding-top: 30px;
+      margin-top: 50px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      color: #707a82 !important;
+      -webkit-text-fill-color: #707a82 !important;
+      font-size: 14px;
+    }
+    .footer-bottom strong {
+      color: #a0aab2 !important;
+      -webkit-text-fill-color: #a0aab2 !important;
+    }
+  </style>
+
+    <!-- ==========================================
+       LOCATION DROPDOWN ACCORDION SECTION (FluidTech Style)
+  ========================================== -->
+  <!-- ==========================================
+       LOCATION DROPDOWN ACCORDION SECTION (FluidTech Style)
+  ========================================== -->
+  <section class="location-dropdown-section" id="locationAccordionSection">
+    <div class="location-accordion-container">
+      <div class="location-accordion-wrapper" id="locationAccordion">
+        <!-- Accordion Header / Pill Bar -->
+        <button type="button" class="location-toggle-bar" id="locationToggleBtn" aria-expanded="false" aria-controls="locationPanel">
+          <div class="location-bar-title">
+            <span class="location-icon-badge">
+              <i class="fa-solid fa-location-dot"></i>
+            </span>
+            <span class="location-text">Location</span>
+          </div>
+          <span class="location-btn-badge" id="locationBtnText">
+            Expand <i class="fa-solid fa-chevron-down ms-1"></i>
+          </span>
+        </button>
+
+        <!-- Accordion Dropdown Content Panel -->
+        <div class="location-content-panel" id="locationPanel">
+          <div class="location-grid">
+            <!-- Pune Column -->
+            <div class="location-card">
+              <div class="location-card-header">
+                <i class="fa-solid fa-building me-2"></i>
+                <span>PUNE</span>
+              </div>
+              <div class="location-columns-grid">
+                <!-- Column 1 -->
+                <ul class="location-links-col">
+                  <li>
+                    <a href="printable-polycarbonate-sheets-supplier-distributor-in-pune.html" class="location-link-item">
+                      <span class="loc-link-left"><span class="loc-dot"></span> Printable Polycarbonate Sheets</span>
+                      <i class="fa-solid fa-arrow-right loc-arrow"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="adhesive-tapes-supplier-distributor-in-pune.html" class="location-link-item">
+                      <span class="loc-link-left"><span class="loc-dot"></span> Adhesive Tapes</span>
+                      <i class="fa-solid fa-arrow-right loc-arrow"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="transfer-tapes-supplier-distributor-in-pune.html" class="location-link-item">
+                      <span class="loc-link-left"><span class="loc-dot"></span> Transfer Tapes</span>
+                      <i class="fa-solid fa-arrow-right loc-arrow"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="non-tearable-sheets-supplier-distributor-in-pune.html" class="location-link-item">
+                      <span class="loc-link-left"><span class="loc-dot"></span> Non Tearable Sheets</span>
+                      <i class="fa-solid fa-arrow-right loc-arrow"></i>
+                    </a>
+                  </li>
+                </ul>
+                <!-- Column 2 -->
+                <ul class="location-links-col">
+                  <li>
+                    <a href="tissue-tapes-supplier-distributor-in-pune.html" class="location-link-item">
+                      <span class="loc-link-left"><span class="loc-dot"></span> Tissue Tapes</span>
+                      <i class="fa-solid fa-arrow-right loc-arrow"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="pp-rubber-screen-printing-inks-supplier-distributor-in-pune.html" class="location-link-item">
+                      <span class="loc-link-left"><span class="loc-dot"></span> PP / Rubber / Screen Printing Inks</span>
+                      <i class="fa-solid fa-arrow-right loc-arrow"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="polyester-meshes-supplier-distributor-in-pune.html" class="location-link-item">
+                      <span class="loc-link-left"><span class="loc-dot"></span> Polyester Mesh</span>
+                      <i class="fa-solid fa-arrow-right loc-arrow"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="polyester-tapes-supplier-distributor-in-pune.html" class="location-link-item">
+                      <span class="loc-link-left"><span class="loc-dot"></span> Polyester Tapes</span>
+                      <i class="fa-solid fa-arrow-right loc-arrow"></i>
+                    </a>
+                  </li>
+                </ul>
+                <!-- Column 3 -->
+                <ul class="location-links-col">
+                  <li>
+                    <a href="graphics-and-industrial-films-supplier-distributor-in-pune.html" class="location-link-item">
+                      <span class="loc-link-left"><span class="loc-dot"></span> Graphics & Industrial Films</span>
+                      <i class="fa-solid fa-arrow-right loc-arrow"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="vhb-and-uhb-tapes-supplier-distributor-in-pune.html" class="location-link-item">
+                      <span class="loc-link-left"><span class="loc-dot"></span> VHB & UHB Tapes</span>
+                      <i class="fa-solid fa-arrow-right loc-arrow"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="self-adhesive-vinyls-supplier-distributor-in-pune.html" class="location-link-item">
+                      <span class="loc-link-left"><span class="loc-dot"></span> Self Adhesive Vinyls</span>
+                      <i class="fa-solid fa-arrow-right loc-arrow"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="prepress-solutions-provider-in-pune.html" class="location-link-item">
+                      <span class="loc-link-left"><span class="loc-dot"></span> Pre Press Solutions</span>
+                      <i class="fa-solid fa-arrow-right loc-arrow"></i>
+                    </a>
+                  </li>
+                </ul>
+                <!-- Column 4 -->
+                <ul class="location-links-col">
+                  <li>
+                    <a href="customized-aluminium-screen-printing-frames-manufacturer-in-pune.html" class="location-link-item">
+                      <span class="loc-link-left"><span class="loc-dot"></span> Customized Aluminium Screen Printing Frames</span>
+                      <i class="fa-solid fa-arrow-right loc-arrow"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="aluminium-screen-frame-exposing-services-provider-in-pune.html" class="location-link-item">
+                      <span class="loc-link-left"><span class="loc-dot"></span> Aluminium Screen Frame Exposing Services</span>
+                      <i class="fa-solid fa-arrow-right loc-arrow"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="aluminium-screen-making-services-provider-in-pune.html" class="location-link-item">
+                      <span class="loc-link-left"><span class="loc-dot"></span> Aluminium Screen Making Services</span>
+                      <i class="fa-solid fa-arrow-right loc-arrow"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="customized-shade-matching-services-provider-in-pune.html" class="location-link-item">
+                      <span class="loc-link-left"><span class="loc-dot"></span> Customized Shade Matching Services</span>
+                      <i class="fa-solid fa-arrow-right loc-arrow"></i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Modern Unified Footer -->
+  <footer style="background: linear-gradient(180deg, #0e131f 0%, #080b12 100%); color: #e2e8f0; font-family: 'Poppins', sans-serif; padding: 60px 20px 24px; border-top: 1px solid rgba(255,255,255,0.08); position: relative; z-index: 10;">
+  <div style="max-width: 1240px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 40px; align-items: start;">
+
+    <!-- Col 1: Brand & About -->
+    <div>
+      <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 16px;">
+        <img src="images/logo-final.webp" alt="Screensource Logo" style="height: 52px; width: auto; object-fit: contain; background: rgba(255,255,255,0.95); padding: 4px 10px; border-radius: 8px;" loading="eager" decoding="async">
+      </div>
+      <p style="font-size: 0.9rem; line-height: 1.6; color: #94a3b8; margin-bottom: 20px;">
+        Screensource is your premier one-stop destination for high-precision screen printing materials, technical films, meshes, adhesives, and state-of-the-art machinery in Narhe, Pune, India.
+      </p>
+      <a href="https://maps.google.com/?cid=14231081690062432371" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; gap: 8px; background: linear-gradient(90deg, #00AEEF, #0077b6); color: #fff; font-size: 0.85rem; font-weight: 600; padding: 9px 18px; border-radius: 30px; text-decoration: none; box-shadow: 0 4px 14px rgba(0, 174, 239, 0.3); transition: transform 0.2s;">
+        <i class="fab fa-google"></i> Review Us on Google
+      </a>
+    </div>
+
+    <!-- Col 2: Quick Links -->
+    <div>
+      <h4 style="font-size: 1.05rem; font-weight: 700; color: #fff; margin-bottom: 16px; border-left: 3px solid #ed1607; padding-left: 10px;">Quick Links</h4>
+      <ul style="list-style: none; padding: 0; margin: 0; line-height: 2;">
+        <li><a href="index.html" style="color: #94a3b8; text-decoration: none; font-size: 0.9rem; transition: color 0.2s;"><i class="fas fa-chevron-right" style="font-size: 10px; color: #00AEEF; margin-right: 8px;"></i>Home</a></li>
+        <li><a href="about-us.html" style="color: #94a3b8; text-decoration: none; font-size: 0.9rem; transition: color 0.2s;"><i class="fas fa-chevron-right" style="font-size: 10px; color: #00AEEF; margin-right: 8px;"></i>About Us</a></li>
+        <li><a href="brands.html" style="color: #94a3b8; text-decoration: none; font-size: 0.9rem; transition: color 0.2s;"><i class="fas fa-chevron-right" style="font-size: 10px; color: #00AEEF; margin-right: 8px;"></i>Our Brands</a></li>
+        <li><a href="services.html" style="color: #94a3b8; text-decoration: none; font-size: 0.9rem; transition: color 0.2s;"><i class="fas fa-chevron-right" style="font-size: 10px; color: #00AEEF; margin-right: 8px;"></i>Services</a></li>
+        <li><a href="machines.html" style="color: #94a3b8; text-decoration: none; font-size: 0.9rem; transition: color 0.2s;"><i class="fas fa-chevron-right" style="font-size: 10px; color: #00AEEF; margin-right: 8px;"></i>Machines</a></li>
+        <li><a href="contact.html" style="color: #94a3b8; text-decoration: none; font-size: 0.9rem; transition: color 0.2s;"><i class="fas fa-chevron-right" style="font-size: 10px; color: #00AEEF; margin-right: 8px;"></i>Contact Us</a></li>
+      </ul>
+    </div>
+
+    <!-- Col 3: Contact Info -->
+    <div>
+      <h4 style="font-size: 1.05rem; font-weight: 700; color: #fff; margin-bottom: 16px; border-left: 3px solid #00AEEF; padding-left: 10px;">Contact Us</h4>
+      <p style="font-size: 0.88rem; color: #94a3b8; line-height: 1.6; margin-bottom: 12px;">
+        <strong style="color: #e2e8f0;">Address:</strong><br>
+        S. No. 46/2/1, Near Dhayari Bridge, Narhe Road, Narhe, Pune - 411041, Maharashtra, India.
+      </p>
+      <p style="font-size: 0.88rem; color: #94a3b8; line-height: 1.6; margin-bottom: 8px;">
+        <strong style="color: #e2e8f0;">Phone:</strong><br>
+        <a href="tel:+919607806010" style="color: #00AEEF; text-decoration: none;">+91 96078 06010</a>
+      </p>
+      <p style="font-size: 0.88rem; color: #94a3b8; line-height: 1.6;">
+        <strong style="color: #e2e8f0;">Email:</strong><br>
+        <!--email_off--><a href="mailto:designatscreensource@gmail.com" style="color: #00AEEF; text-decoration: none;">designatscreensource@gmail.com</a><!--/email_off-->
+      </p>
+    </div>
+
+    <!-- Col 4: Location Map -->
+    <div>
+      <h4 style="font-size: 1.05rem; font-weight: 700; color: #fff; margin-bottom: 16px; border-left: 3px solid #EC008C; padding-left: 10px;">Our Location</h4>
+      <div style="border-radius: 12px; overflow: hidden; box-shadow: 0 4px 18px rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.1);">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4076.981068331639!2d73.82156955678097!3d18.45287803884138!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2ebe0e1a971a7%3A0xc57ef565c9bca873!2sSCREENSOURCE!5e1!3m2!1sen!2sin!4v1793437765544!5m2!1sen!2sin" width="100%" height="150" style="border:0; display:block;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+      </div>
+      <div style="margin-top: 12px; display: flex; gap: 10px;">
+        <a href="https://www.instagram.com/screensource_india/?hl=en" target="_blank" style="width: 32px; height: 32px; border-radius: 50%; background: rgba(255,255,255,0.08); display: flex; align-items: center; justify-content: center; color: #fff; text-decoration: none; transition: background 0.2s;"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.facebook.com/ScreensourcePune/" target="_blank" style="width: 32px; height: 32px; border-radius: 50%; background: rgba(255,255,255,0.08); display: flex; align-items: center; justify-content: center; color: #fff; text-decoration: none; transition: background 0.2s;"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://wa.me/919607806010" target="_blank" style="width: 32px; height: 32px; border-radius: 50%; background: rgba(255,255,255,0.08); display: flex; align-items: center; justify-content: center; color: #25D366; text-decoration: none; transition: background 0.2s;" rel="nofollow noopener noreferrer"><i class="fab fa-whatsapp"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <div style="max-width: 1240px; margin: 40px auto 0; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.06); display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; font-size: 0.82rem; color: #64748b;">
+    <p>&copy; 2026 Screensource Pune. All Rights Reserved.</p>
+    <p>Premium Screen Printing Solutions & Industrial Materials</p>
+  </div>
+</footer>
+
+  <!-- Scroll to Top Button -->
+  <button onclick="window.scrollTo({top:0, behavior:'smooth'})"
+    style="position:fixed; bottom:20px; right:20px; background:#ed1607; color: #ffffff; border:none; border-radius:50%; width:45px; height:45px; cursor:pointer; font-size:18px; z-index:999; display:flex; align-items:center; justify-content:center; box-shadow:0 4px 12px rgba(237,22,7,0.3);">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!-- Floating Call Button -->
+  <a href="tel:+919607806010"
+    style="position:fixed; bottom:80px; right:20px; background:#00AEEF; color: #ffffff; border:none; border-radius:50%; width:50px; height:50px; display:flex; align-items:center; justify-content:center; text-decoration:none; box-shadow:0 4px 12px rgba(0,0,0,0.2); z-index:999;">
+    <i class="fas fa-phone" style="font-size: 20px;"></i>
+  </a>
+
+  <!-- Floating WhatsApp Button -->
+  <a href="https://wa.me/919607806010" target="_blank"
+    style="position:fixed; bottom:150px; right:20px; background:#25D366; color: #ffffff; border:none; border-radius:50%; width:50px; height:50px; display:flex; align-items:center; justify-content:center; text-decoration:none; box-shadow:0 4px 12px rgba(0,0,0,0.2); z-index:999;" rel="nofollow noopener noreferrer">
+    <i class="fab fa-whatsapp" style="font-size: 24px;"></i>
+  </a>
+
+  <!-- Slider JavaScript -->
+  <script>
+    const container = document.getElementById('sliderContainer');
+    const leftBtn = document.getElementById('leftBtn');
+    const rightBtn = document.getElementById('rightBtn');
+    const dotsContainer = document.getElementById('dots');
+    const cards = container.querySelectorAll('.slider-card');
+
+    let currentIndex = 0;
+    let cardWidth = cards[0].offsetWidth + 16;
+    const totalCards = cards.length;
+
+    // Create dots
+    for (let i = 0; i < totalCards; i++) {
+      const dot = document.createElement('span');
+      if (i === 0) dot.classList.add('active');
+      dot.addEventListener('click', () => goToSlide(i));
+      dotsContainer.appendChild(dot);
+    }
+    const dots = dotsContainer.querySelectorAll('span');
+
+    function updateDots(index) {
+      dots.forEach(dot => dot.classList.remove('active'));
+      if (dots[index]) dots[index].classList.add('active');
+    }
+
+    function goToSlide(index) {
+      currentIndex = index;
+      container.scrollTo({ left: index * cardWidth, behavior: 'smooth' });
+      updateDots(currentIndex);
+    }
+
+    leftBtn.addEventListener('click', () => {
+      currentIndex = (currentIndex - 1 + totalCards) % totalCards;
+      goToSlide(currentIndex);
+    });
+
+    rightBtn.addEventListener('click', () => {
+      currentIndex = (currentIndex + 1) % totalCards;
+      goToSlide(currentIndex);
+    });
+
+    window.addEventListener('resize', () => {
+      cardWidth = cards[0].offsetWidth + 16;
+      goToSlide(currentIndex);
+    });
+
+    // Touch swipe
+    let startX = 0;
+    container.addEventListener('touchstart', e => startX = e.touches[0].clientX);
+    container.addEventListener('touchend', e => {
+      let endX = e.changedTouches[0].clientX;
+      if (startX - endX > 50) rightBtn.click();
+      if (endX - startX > 50) leftBtn.click();
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,904 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="robots" content="index, follow" />
+  <meta name="revisit-after" content="7 days" />
+  <title>Surface Protection Films - Screensource</title>
+  <link rel="icon" type="image/webp" href="images/logo-final.webp">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #f8fafc;
+      color: #1e293b;
+      overflow-x: hidden;
+    }
+    .hero-container {
+      background: linear-gradient(135deg, #0b1120 0%, #1e293b 100%);
+      color: #fff;
+      padding: 60px 24px;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 40px;
+      align-items: center;
+    }
+    @media (max-width: 868px) {
+      .hero-inner { grid-template-columns: 1fr; text-align: center; }
+    }
+    .badge {
+      display: inline-block;
+      background: rgba(0, 174, 239, 0.15);
+      border: 1px solid rgba(0, 174, 239, 0.4);
+      color: #00AEEF;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      padding: 6px 16px;
+      border-radius: 30px;
+      margin-bottom: 16px;
+    }
+    .hero-h1 {
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 800;
+      line-height: 1.2;
+      margin-bottom: 16px;
+      background: linear-gradient(90deg, #ffffff, #00AEEF);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .hero-desc {
+      font-size: 1.05rem;
+      color: #cbd5e1;
+      line-height: 1.65;
+      margin-bottom: 28px;
+    }
+    .btn-quote {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: linear-gradient(90deg, #00AEEF, #ed1607);
+      color: #fff;
+      font-weight: 700;
+      font-size: 0.95rem;
+      padding: 14px 30px;
+      border-radius: 40px;
+      text-decoration: none;
+      box-shadow: 0 8px 20px rgba(0,174,239,0.3);
+      transition: transform 0.25s ease;
+    }
+    .btn-quote:hover { transform: translateY(-2px); }
+    .btn-phone {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,255,255,0.1);
+      color: #fff;
+      font-weight: 600;
+      font-size: 0.95rem;
+      padding: 14px 24px;
+      border-radius: 40px;
+      text-decoration: none;
+      margin-left: 12px;
+      transition: background 0.25s ease;
+    }
+    .btn-phone:hover { background: rgba(255,255,255,0.2); }
+    .hero-img-box {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 20px;
+      padding: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 340px;
+    }
+    .hero-img-box img {
+      max-height: 100%;
+      max-width: 100%;
+      object-fit: contain;
+      filter: drop-shadow(0 10px 20px rgba(0,0,0,0.3));
+    }
+    .section-wrap {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 60px 24px;
+    }
+    .sec-title {
+      font-size: clamp(1.6rem, 3vw, 2.2rem);
+      font-weight: 800;
+      color: #0f172a;
+      text-align: center;
+      margin-bottom: 12px;
+    }
+    .sec-sub {
+      font-size: 1rem;
+      color: #64748b;
+      text-align: center;
+      max-width: 650px;
+      margin: 0 auto 40px;
+    }
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+    }
+  
+      /* Integrated Hero Breadcrumb - Premium Glassmorphism Pill Design */
+  .hero-breadcrumb {
+    margin-bottom: 22px;
+    display: flex;
+    justify-content: flex-start;
+    position: relative;
+    z-index: 5;
+  }
+  .brands-hero .hero-breadcrumb,
+  .machines-hero .hero-breadcrumb,
+  .services-hero .hero-breadcrumb,
+  .machine-hero .hero-breadcrumb,
+  .hero-section .hero-breadcrumb,
+  .hero-exposing-compact .hero-breadcrumb,
+  .hero .hero-breadcrumb,
+  .three-m-hero .hero-breadcrumb,
+  .avery-hero .hero-breadcrumb,
+  .orafol-hero .hero-breadcrumb,
+  .technova-hero .hero-breadcrumb,
+  .poly-hero .hero-breadcrumb,
+  .yessor-hero .hero-breadcrumb,
+  .printcolor-hero .hero-breadcrumb,
+  .sunsui-hero .hero-breadcrumb,
+  .nittoku-hero .hero-breadcrumb,
+  .nitto-hero .hero-breadcrumb,
+  .nontear-hero .hero-breadcrumb,
+  .synthetic-hero .hero-breadcrumb,
+  .specialty-hero .hero-breadcrumb,
+  .signage-hero .hero-breadcrumb,
+  .stretching-hero .hero-breadcrumb,
+  .contact-hero .hero-breadcrumb,
+  #contact-us .hero-breadcrumb {
+    justify-content: center;
+  }
+  .hero-breadcrumb ol {
+    display: inline-flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    list-style: none;
+    padding: 7px 18px;
+    margin: 0;
+    font-size: 0.85rem;
+    font-weight: 500;
+    font-family: 'Poppins', sans-serif;
+    background: rgba(11, 17, 32, 0.85);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border: 1.5px solid rgba(0, 174, 239, 0.45);
+    border-radius: 50px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35), 0 0 16px rgba(0, 174, 239, 0.18);
+  }
+  .hero-breadcrumb li {
+    display: inline-flex;
+    align-items: center;
+  }
+  .hero-breadcrumb a {
+    color: #f1f5f9 !important;
+    -webkit-text-fill-color: #f1f5f9 !important;
+    text-decoration: none;
+    transition: all 0.25s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-weight: 500;
+    padding: 2px 6px;
+    border-radius: 4px;
+  }
+  .hero-breadcrumb a i.fa-home {
+    color: #00AEEF;
+    font-size: 0.92rem;
+    transition: transform 0.2s ease, color 0.2s ease;
+  }
+  .hero-breadcrumb a:hover {
+    color: #38bdf8 !important;
+    -webkit-text-fill-color: #38bdf8 !important;
+    text-decoration: none;
+    transform: translateY(-1px);
+  }
+  .hero-breadcrumb a:hover i.fa-home {
+    transform: scale(1.15);
+    color: #38bdf8;
+  }
+  .hero-breadcrumb .separator {
+    color: rgba(0, 174, 239, 0.75);
+    font-size: 0.62rem;
+    display: inline-flex;
+    align-items: center;
+    margin: 0 1px;
+  }
+  .hero-breadcrumb .current {
+    color: #00e5ff !important;
+    -webkit-text-fill-color: #00e5ff !important;
+    font-weight: 600;
+    background: rgba(0, 174, 239, 0.18);
+    padding: 3px 12px;
+    border-radius: 30px;
+    border: 1px solid rgba(0, 174, 239, 0.35);
+    box-shadow: 0 2px 8px rgba(0, 174, 239, 0.2);
+    letter-spacing: 0.2px;
+  }
+  #contact-us .hero-breadcrumb ol {
+    background: rgba(255, 255, 255, 0.95);
+    border: 1.5px solid rgba(0, 174, 239, 0.45);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08), 0 0 14px rgba(0, 174, 239, 0.18);
+  }
+  #contact-us .hero-breadcrumb a {
+    color: #1e293b !important;
+    -webkit-text-fill-color: #1e293b !important;
+  }
+  #contact-us .hero-breadcrumb a:hover {
+    color: #00AEEF !important;
+    -webkit-text-fill-color: #00AEEF !important;
+  }
+  #contact-us .hero-breadcrumb a i.fa-home {
+    color: #00AEEF;
+  }
+  #contact-us .hero-breadcrumb .separator {
+    color: #00AEEF;
+    opacity: 0.85;
+  }
+  #contact-us .hero-breadcrumb .current {
+    color: #0284c7 !important;
+    -webkit-text-fill-color: #0284c7 !important;
+    background: rgba(0, 174, 239, 0.12);
+    border: 1px solid rgba(0, 174, 239, 0.35);
+    box-shadow: 0 2px 8px rgba(0, 174, 239, 0.15);
+  }
+  .ss-breadcrumb-nav {
+    display: none !important;
+  }
+
+    /* ===================================================
+       LOCATION DROPDOWN ACCORDION SECTION (FluidTech Style)
+    =================================================== */
+    .location-dropdown-section {
+      padding: 20px 20px 60px 20px;
+      width: 100%;
+      box-sizing: border-box;
+      background: #f8fafc;
+    }
+
+    .location-accordion-container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .location-accordion-wrapper {
+      width: 100%;
+      margin: 0 auto;
+      border-radius: 50px;
+      transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .location-toggle-bar {
+      width: 100%;
+      background: linear-gradient(135deg, #0077b6 0%, #00AEEF 100%);
+      color: #ffffff;
+      border: none;
+      outline: none;
+      border-radius: 50px;
+      padding: 14px 28px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      cursor: pointer;
+      box-shadow: 0 6px 22px rgba(0, 174, 239, 0.25);
+      transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .location-toggle-bar:hover {
+      background: linear-gradient(135deg, #006296 0%, #009ad4 100%);
+      box-shadow: 0 8px 26px rgba(0, 174, 239, 0.35);
+    }
+
+    .location-accordion-wrapper.open .location-toggle-bar {
+      border-radius: 18px 18px 0 0;
+      box-shadow: 0 4px 15px rgba(0, 174, 239, 0.2);
+    }
+
+    .location-bar-title {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .location-icon-badge {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.22);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+      color: #ffffff;
+      backdrop-filter: blur(4px);
+    }
+
+    .location-text {
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.18rem;
+      font-weight: 700;
+      letter-spacing: 0.4px;
+      color: #ffffff;
+    }
+
+    .location-btn-badge {
+      background: rgba(255, 255, 255, 0.2);
+      border: 1px solid rgba(255, 255, 255, 0.35);
+      color: #ffffff;
+      padding: 6px 20px;
+      border-radius: 50px;
+      font-size: 0.88rem;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      backdrop-filter: blur(4px);
+      transition: all 0.25s ease;
+    }
+
+    .location-toggle-bar:hover .location-btn-badge {
+      background: rgba(255, 255, 255, 0.3);
+      border-color: rgba(255, 255, 255, 0.5);
+    }
+
+    .location-content-panel {
+      display: none;
+      background: #ffffff;
+      border: 1px solid #E2E8F0;
+      border-top: none;
+      border-radius: 0 0 18px 18px;
+      padding: 28px 24px;
+      box-shadow: 0 14px 35px rgba(7, 27, 47, 0.08);
+      box-sizing: border-box;
+    }
+
+    .location-accordion-wrapper.open .location-content-panel {
+      display: block;
+      animation: locPanelSlideDown 0.35s ease-out;
+    }
+
+    @keyframes locPanelSlideDown {
+      from { opacity: 0; transform: translateY(-8px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .location-card {
+      background: #ffffff;
+      border: 1px solid #E2E8F0;
+      border-radius: 16px;
+      padding: 24px 28px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+      transition: all 0.3s ease;
+    }
+
+    .location-card:hover {
+      border-color: #CBD5E1;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+    }
+
+    .location-card-header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.2rem;
+      font-weight: 800;
+      color: #0077b6;
+      letter-spacing: 1px;
+      margin-bottom: 22px;
+      padding-bottom: 14px;
+      border-bottom: 2px solid #E2E8F0;
+    }
+
+    .location-card-header i {
+      color: #00AEEF;
+      font-size: 1.15rem;
+    }
+
+    .location-columns-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px 24px;
+    }
+
+    .location-links-col {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .location-link-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 9px 12px;
+      border-radius: 8px;
+      text-decoration: none;
+      color: #334155;
+      font-size: 0.91rem;
+      font-weight: 500;
+      transition: all 0.2s ease;
+      background: transparent;
+      border: 1px solid transparent;
+      box-sizing: border-box;
+    }
+
+    .loc-link-left {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      line-height: 1.35;
+    }
+
+    .loc-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #00AEEF;
+      flex-shrink: 0;
+      transition: transform 0.22s ease, background-color 0.22s ease;
+    }
+
+    .loc-arrow {
+      color: #94A3B8;
+      font-size: 0.82rem;
+      flex-shrink: 0;
+      margin-left: 8px;
+      transition: transform 0.22s ease, color 0.22s ease;
+    }
+
+    .location-link-item:hover {
+      background: #EFF6FF;
+      color: #0077b6;
+      border-color: #BAE6FD;
+      font-weight: 600;
+      transform: translateX(2px);
+    }
+
+    .location-link-item:hover .loc-dot {
+      background: #0077b6;
+      transform: scale(1.35);
+    }
+
+    .location-link-item:hover .loc-arrow {
+      color: #00AEEF;
+      transform: translateX(4px);
+    }
+
+    .location-link-item.active-location-link {
+      color: #0077b6 !important;
+      font-weight: 700 !important;
+      background: #EFF6FF !important;
+      border-color: #00AEEF !important;
+    }
+
+    .location-link-item.active-location-link .loc-dot {
+      background: #0077b6 !important;
+      transform: scale(1.35);
+    }
+
+    .location-link-item.active-location-link .loc-arrow {
+      color: #00AEEF !important;
+    }
+
+    @media (max-width: 1024px) {
+      .location-columns-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px 20px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .location-toggle-bar {
+        padding: 10px 18px;
+      }
+      .location-text {
+        font-size: 1.05rem;
+      }
+      .location-btn-badge {
+        padding: 5px 14px;
+        font-size: 0.8rem;
+      }
+      .location-content-panel {
+        padding: 18px 14px;
+      }
+      .location-card {
+        padding: 16px 14px;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .location-columns-grid {
+        grid-template-columns: 1fr;
+        gap: 6px;
+      }
+      .location-link-item {
+        padding: 8px 8px;
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <script src="navbar.js?v=2.0"></script>
+
+<!-- Hero Section -->
+  <section class="hero-films hero-container">
+    <div class="hero-inner">
+      <div>
+    <nav class="hero-breadcrumb" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+        <li class="separator"><i class="fas fa-chevron-right"></i></li>
+        <li class="current" aria-current="page">Surface Protection Films</li>
+      </ol>
+    </nav>
+
+        <span class="badge">Process Protection</span>
+        <h1 class="hero-h1">Surface Protection Films & Tapes</h1>
+        <p class="hero-desc">Advanced protective films engineered to safeguard delicate plastics, electronic fascias, touchscreens, and metal panels from fabrication scratches.</p>
+        
+      </div>
+      <div class="hero-img-box">
+        <img src="images/surface-protection-01.webp" alt="Surface Protection Films & Tapes" loading="lazy" decoding="async">
+      </div>
+    </div>
+  </section>
+
+  <!-- Key Features Section -->
+  <section class="section-wrap">
+    <h2 class="sec-title">Key Advantages & Performance</h2>
+    <p class="sec-sub">Engineered to rigorous industrial standards for precision, consistency, and durability.</p>
+    <div class="grid-3">
+
+        <div style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 16px; padding: 28px 24px; box-shadow: 0 4px 16px rgba(0,0,0,0.04); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+          <div style="width: 48px; height: 48px; border-radius: 12px; background: rgba(0,174,239,0.1); color: #00AEEF; display: flex; align-items: center; justify-content: center; font-size: 20px; margin-bottom: 16px;">
+            <i class="fas fa-check-circle"></i>
+          </div>
+          <h3 style="font-size: 1.15rem; font-weight: 700; color: #0f172a; margin-bottom: 8px;">Residue-Free Clean Removal</h3>
+          <p style="font-size: 0.92rem; color: #64748b; line-height: 1.6; margin: 0;">Specially formulated low to medium tack adhesive removes cleanly without leaving glue residue.</p>
+        </div>
+        <div style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 16px; padding: 28px 24px; box-shadow: 0 4px 16px rgba(0,0,0,0.04); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+          <div style="width: 48px; height: 48px; border-radius: 12px; background: rgba(0,174,239,0.1); color: #00AEEF; display: flex; align-items: center; justify-content: center; font-size: 20px; margin-bottom: 16px;">
+            <i class="fas fa-shield-alt"></i>
+          </div>
+          <h3 style="font-size: 1.15rem; font-weight: 700; color: #0f172a; margin-bottom: 8px;">Scratch & Abrasion Defense</h3>
+          <p style="font-size: 0.92rem; color: #64748b; line-height: 1.6; margin: 0;">Tough polyethylene / polyester backing shields sensitive gloss plastics, stainless steel, and glass.</p>
+        </div>
+        <div style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 16px; padding: 28px 24px; box-shadow: 0 4px 16px rgba(0,0,0,0.04); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+          <div style="width: 48px; height: 48px; border-radius: 12px; background: rgba(0,174,239,0.1); color: #00AEEF; display: flex; align-items: center; justify-content: center; font-size: 20px; margin-bottom: 16px;">
+            <i class="fas fa-sync-alt"></i>
+          </div>
+          <h3 style="font-size: 1.15rem; font-weight: 700; color: #0f172a; margin-bottom: 8px;">Uniform Unwind & Easy Lamination</h3>
+          <p style="font-size: 0.92rem; color: #64748b; line-height: 1.6; margin: 0;">Smooth unwinding characteristics suitable for automated high-speed roll laminators or manual sheet application.</p>
+        </div>
+        <div style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 16px; padding: 28px 24px; box-shadow: 0 4px 16px rgba(0,0,0,0.04); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+          <div style="width: 48px; height: 48px; border-radius: 12px; background: rgba(0,174,239,0.1); color: #00AEEF; display: flex; align-items: center; justify-content: center; font-size: 20px; margin-bottom: 16px;">
+            <i class="fas fa-balance-scale"></i>
+          </div>
+          <h3 style="font-size: 1.15rem; font-weight: 700; color: #0f172a; margin-bottom: 8px;">Controlled Adhesion Stability</h3>
+          <p style="font-size: 0.92rem; color: #64748b; line-height: 1.6; margin: 0;">Adhesive peel strength remains stable and does not build up excessively over storage time.</p>
+        </div>
+    </div>
+  </section>
+
+  <!-- Technical Specifications Section -->
+  <section style="background: #ffffff; border-top: 1px solid #e2e8f0; border-bottom: 1px solid #e2e8f0; padding: 60px 24px;">
+    <div style="max-width: 900px; margin: 0 auto;">
+      <h2 class="sec-title">Technical Specifications</h2>
+      <p class="sec-sub">Validated data ensuring seamless integration into your production process.</p>
+      <div style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 14px rgba(0,0,0,0.03);">
+        <table style="width: 100%; border-collapse: collapse; font-size: 0.92rem;">
+          <tbody>
+
+        <tr style="border-bottom: 1px solid #e2e8f0;">
+          <td style="padding: 12px 16px; font-weight: 600; color: #334155; width: 40%; background: #f8fafc;">Backing Material</td>
+          <td style="padding: 12px 16px; color: #475569;">Co-extruded LDPE / Optical PET</td>
+        </tr>
+        <tr style="border-bottom: 1px solid #e2e8f0;">
+          <td style="padding: 12px 16px; font-weight: 600; color: #334155; width: 40%; background: #f8fafc;">Thickness</td>
+          <td style="padding: 12px 16px; color: #475569;">35, 50, 70, 100 Microns</td>
+        </tr>
+        <tr style="border-bottom: 1px solid #e2e8f0;">
+          <td style="padding: 12px 16px; font-weight: 600; color: #334155; width: 40%; background: #f8fafc;">Adhesive Type</td>
+          <td style="padding: 12px 16px; color: #475569;">Water-based Acrylic / Natural Rubber low-tack</td>
+        </tr>
+        <tr style="border-bottom: 1px solid #e2e8f0;">
+          <td style="padding: 12px 16px; font-weight: 600; color: #334155; width: 40%; background: #f8fafc;">Peel Adhesion</td>
+          <td style="padding: 12px 16px; color: #475569;">10 - 120 g/25mm (Customizable tack)</td>
+        </tr>
+        <tr style="border-bottom: 1px solid #e2e8f0;">
+          <td style="padding: 12px 16px; font-weight: 600; color: #334155; width: 40%; background: #f8fafc;">Color Options</td>
+          <td style="padding: 12px 16px; color: #475569;">Clear Transparent, Blue Tinted, Milky White</td>
+        </tr>
+        <tr style="border-bottom: 1px solid #e2e8f0;">
+          <td style="padding: 12px 16px; font-weight: 600; color: #334155; width: 40%; background: #f8fafc;">Applications</td>
+          <td style="padding: 12px 16px; color: #475569;">Membrane switch protection, plastic sheets, metal panels, touch screens during assembly</td>
+        </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- Product Gallery Section -->
+  <section class="section-wrap">
+    <h2 class="sec-title">Product Showcase</h2>
+    <p class="sec-sub">High-resolution views of available grades, formats, and packaging.</p>
+    <div class="grid-3">
+
+        <div style="background: #fff; border: 1px solid #e2e8f0; border-radius: 16px; overflow: hidden; box-shadow: 0 6px 20px rgba(0,0,0,0.05); text-align: center;">
+          <div style="height: 220px; width: 100%; display: flex; align-items: center; justify-content: center; background: #f8fafc; padding: 16px;">
+            <img src="images/surface-protection-01.webp" alt="Blue & Clear Protective Film Rolls" style="max-height: 100%; max-width: 100%; object-fit: contain;" loading="lazy" decoding="async">
+          </div>
+          <div style="padding: 14px; font-size: 0.9rem; font-weight: 600; color: #1e293b;">Blue & Clear Protective Film Rolls</div>
+        </div>
+        <div style="background: #fff; border: 1px solid #e2e8f0; border-radius: 16px; overflow: hidden; box-shadow: 0 6px 20px rgba(0,0,0,0.05); text-align: center;">
+          <div style="height: 220px; width: 100%; display: flex; align-items: center; justify-content: center; background: #f8fafc; padding: 16px;">
+            <img src="images/surface-protection.webp" alt="Peelable Surface Protection Films" style="max-height: 100%; max-width: 100%; object-fit: contain;" loading="lazy" decoding="async">
+          </div>
+          <div style="padding: 14px; font-size: 0.9rem; font-weight: 600; color: #1e293b;">Peelable Surface Protection Films</div>
+        </div>
+        <div style="background: #fff; border: 1px solid #e2e8f0; border-radius: 16px; overflow: hidden; box-shadow: 0 6px 20px rgba(0,0,0,0.05); text-align: center;">
+          <div style="height: 220px; width: 100%; display: flex; align-items: center; justify-content: center; background: #f8fafc; padding: 16px;">
+            <img src="images/screen-printing-products/nitto-2.webp" alt="Nitto Surface Protection Solutions" style="max-height: 100%; max-width: 100%; object-fit: contain;" loading="lazy" decoding="async">
+          </div>
+          <div style="padding: 14px; font-size: 0.9rem; font-weight: 600; color: #1e293b;">Nitto Surface Protection Solutions</div>
+        </div>
+    </div>
+  </section>
+
+  <!-- CTA Box -->
+  <section style="background: linear-gradient(135deg, #00AEEF 0%, #0077b6 100%); color: #fff; padding: 50px 24px; text-align: center;">
+    <div style="max-width: 800px; margin: 0 auto;">
+      <h2 style="font-size: 2rem; font-weight: 800; margin-bottom: 12px;">Need Custom Slitting or Bulk Samples?</h2>
+      <p style="font-size: 1.05rem; opacity: 0.95; margin-bottom: 24px;">Screensource provides precision roll slitting, custom sheet cutting, and express dispatch across Pune & India.</p>
+      <a href="contact.html" style="background: #fff; color: #0077b6; font-weight: 700; padding: 14px 34px; border-radius: 40px; text-decoration: none; display: inline-block; box-shadow: 0 6px 18px rgba(0,0,0,0.15);">Get in Touch Today &rarr;</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <!-- Modern Unified Footer -->
+  <!-- ==========================================
+       LOCATION DROPDOWN ACCORDION SECTION (FluidTech Style)
+  ========================================== -->
+  <!-- ==========================================
+       LOCATION DROPDOWN ACCORDION SECTION (FluidTech Style)
+  ========================================== -->
+  <section class="location-dropdown-section" id="locationAccordionSection">
+    <div class="location-accordion-container">
+      <div class="location-accordion-wrapper" id="locationAccordion">
+        <!-- Accordion Header / Pill Bar -->
+        <button type="button" class="location-toggle-bar" id="locationToggleBtn" aria-expanded="false" aria-controls="locationPanel">
+          <div class="location-bar-title">
+            <span class="location-icon-badge">
+              <i class="fa-solid fa-location-dot"></i>
+            </span>
+            <span class="location-text">Location</span>
+          </div>
+          <span class="location-btn-badge" id="locationBtnText">
+            Expand <i class="fa-solid fa-chevron-down ms-1"></i>
+          </span>
+        </button>
+
+        <!-- Accordion Dropdown Content Panel -->
+        <div class="location-content-panel" id="locationPanel">
+          <div class="location-grid">
+            <!-- Pune Column -->
+            <div class="location-card">
+              <div class="location-card-header">
+                <i class="fa-solid fa-building me-2"></i>
+                <span>PUNE</span>
+              </div>
+              <div class="location-columns-grid">
+                <!-- Column 1 -->
+                <ul class="location-links-col">
+                  <li>
+                    <a href="printable-polycarbonate-sheets-supplier-distributor-in-pune.html" class="location-link-item">
+                      <span class="loc-link-left"><span class="loc-dot"></span> Printable Polycarbonate Sheets</span>
+                      <i class="fa-solid fa-arrow-right loc-arrow"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="adhesive-tapes-supplier-distributor-in-pune.html" class="location-link-item">
+                      <span class="loc-link-left"><span class="loc-dot"></span> Adhesive Tapes</span>
+                      <i class="fa-solid fa-arrow-right loc-arrow"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="transfer-tapes-supplier-distributor-in-pune.html" class="location-link-item">
+                      <span class="loc-link-left"><span class="loc-dot"></span> Transfer Tapes</span>
+                      <i class="fa-solid fa-arrow-right loc-arrow"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="non-tearable-sheets-supplier-distributor-in-pune.html" class="location-link-item">
+                      <span class="loc-link-left"><span class="loc-dot"></span> Non Tearable Sheets</span>
+                      <i class="fa-solid fa-arrow-right loc-arrow"></i>
+                    </a>
+                  </li>
+                </ul>
+                <!-- Column 2 -->
+                <ul class="location-links-col">
+                  <li>
+                    <a href="tissue-tapes-supplier-distributor-in-pune.html" class="location-link-item">
+                      <span class="loc-link-left"><span class="loc-dot"></span> Tissue Tapes</span>
+                      <i class="fa-solid fa-arrow-right loc-arrow"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="pp-rubber-screen-printing-inks-supplier-distributor-in-pune.html" class="location-link-item">
+                      <span class="loc-link-left"><span class="loc-dot"></span> PP / Rubber / Screen Printing Inks</span>
+                      <i class="fa-solid fa-arrow-right loc-arrow"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="polyester-meshes-supplier-distributor-in-pune.html" class="location-link-item">
+                      <span class="loc-link-left"><span class="loc-dot"></span> Polyester Mesh</span>
+                      <i class="fa-solid fa-arrow-right loc-arrow"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="polyester-tapes-supplier-distributor-in-pune.html" class="location-link-item">
+                      <span class="loc-link-left"><span class="loc-dot"></span> Polyester Tapes</span>
+                      <i class="fa-solid fa-arrow-right loc-arrow"></i>
+                    </a>
+                  </li>
+                </ul>
+                <!-- Column 3 -->
+                <ul class="location-links-col">
+                  <li>
+                    <a href="graphics-and-industrial-films-supplier-distributor-in-pune.html" class="location-link-item">
+                      <span class="loc-link-left"><span class="loc-dot"></span> Graphics & Industrial Films</span>
+                      <i class="fa-solid fa-arrow-right loc-arrow"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="vhb-and-uhb-tapes-supplier-distributor-in-pune.html" class="location-link-item">
+                      <span class="loc-link-left"><span class="loc-dot"></span> VHB & UHB Tapes</span>
+                      <i class="fa-solid fa-arrow-right loc-arrow"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="self-adhesive-vinyls-supplier-distributor-in-pune.html" class="location-link-item">
+                      <span class="loc-link-left"><span class="loc-dot"></span> Self Adhesive Vinyls</span>
+                      <i class="fa-solid fa-arrow-right loc-arrow"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="prepress-solutions-provider-in-pune.html" class="location-link-item">
+                      <span class="loc-link-left"><span class="loc-dot"></span> Pre Press Solutions</span>
+                      <i class="fa-solid fa-arrow-right loc-arrow"></i>
+                    </a>
+                  </li>
+                </ul>
+                <!-- Column 4 -->
+                <ul class="location-links-col">
+                  <li>
+                    <a href="customized-aluminium-screen-printing-frames-manufacturer-in-pune.html" class="location-link-item">
+                      <span class="loc-link-left"><span class="loc-dot"></span> Customized Aluminium Screen Printing Frames</span>
+                      <i class="fa-solid fa-arrow-right loc-arrow"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="aluminium-screen-frame-exposing-services-provider-in-pune.html" class="location-link-item">
+                      <span class="loc-link-left"><span class="loc-dot"></span> Aluminium Screen Frame Exposing Services</span>
+                      <i class="fa-solid fa-arrow-right loc-arrow"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="aluminium-screen-making-services-provider-in-pune.html" class="location-link-item">
+                      <span class="loc-link-left"><span class="loc-dot"></span> Aluminium Screen Making Services</span>
+                      <i class="fa-solid fa-arrow-right loc-arrow"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="customized-shade-matching-services-provider-in-pune.html" class="location-link-item">
+                      <span class="loc-link-left"><span class="loc-dot"></span> Customized Shade Matching Services</span>
+                      <i class="fa-solid fa-arrow-right loc-arrow"></i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<footer style="background: linear-gradient(180deg, #0e131f 0%, #080b12 100%); color: #e2e8f0; font-family: 'Poppins', sans-serif; padding: 60px 20px 24px; border-top: 1px solid rgba(255,255,255,0.08); position: relative; z-index: 10;">
+  <div style="max-width: 1240px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 40px; align-items: start;">
+
+    <!-- Col 1: Brand & About -->
+    <div>
+      <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 16px;">
+        <img src="images/logo-final.webp" alt="Screensource Logo" style="height: 52px; width: auto; object-fit: contain; background: rgba(255,255,255,0.95); padding: 4px 10px; border-radius: 8px;" loading="eager" decoding="async">
+      </div>
+      <p style="font-size: 0.9rem; line-height: 1.6; color: #94a3b8; margin-bottom: 20px;">
+        Screensource is your premier one-stop destination for high-precision screen printing materials, technical films, meshes, adhesives, and state-of-the-art machinery in Narhe, Pune, India.
+      </p>
+      <a href="https://maps.google.com/?cid=14231081690062432371" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; gap: 8px; background: linear-gradient(90deg, #00AEEF, #0077b6); color: #fff; font-size: 0.85rem; font-weight: 600; padding: 9px 18px; border-radius: 30px; text-decoration: none; box-shadow: 0 4px 14px rgba(0, 174, 239, 0.3); transition: transform 0.2s;">
+        <i class="fab fa-google"></i> Review Us on Google
+      </a>
+    </div>
+
+    <!-- Col 2: Quick Links -->
+    <div>
+      <h4 style="font-size: 1.05rem; font-weight: 700; color: #fff; margin-bottom: 16px; border-left: 3px solid #ed1607; padding-left: 10px;">Quick Links</h4>
+      <ul style="list-style: none; padding: 0; margin: 0; line-height: 2;">
+        <li><a href="index.html" style="color: #94a3b8; text-decoration: none; font-size: 0.9rem; transition: color 0.2s;"><i class="fas fa-chevron-right" style="font-size: 10px; color: #00AEEF; margin-right: 8px;"></i>Home</a></li>
+        <li><a href="about-us.html" style="color: #94a3b8; text-decoration: none; font-size: 0.9rem; transition: color 0.2s;"><i class="fas fa-chevron-right" style="font-size: 10px; color: #00AEEF; margin-right: 8px;"></i>About Us</a></li>
+        <li><a href="brands.html" style="color: #94a3b8; text-decoration: none; font-size: 0.9rem; transition: color 0.2s;"><i class="fas fa-chevron-right" style="font-size: 10px; color: #00AEEF; margin-right: 8px;"></i>Our Brands</a></li>
+        <li><a href="services.html" style="color: #94a3b8; text-decoration: none; font-size: 0.9rem; transition: color 0.2s;"><i class="fas fa-chevron-right" style="font-size: 10px; color: #00AEEF; margin-right: 8px;"></i>Services</a></li>
+        <li><a href="machines.html" style="color: #94a3b8; text-decoration: none; font-size: 0.9rem; transition: color 0.2s;"><i class="fas fa-chevron-right" style="font-size: 10px; color: #00AEEF; margin-right: 8px;"></i>Machines</a></li>
+        <li><a href="contact.html" style="color: #94a3b8; text-decoration: none; font-size: 0.9rem; transition: color 0.2s;"><i class="fas fa-chevron-right" style="font-size: 10px; color: #00AEEF; margin-right: 8px;"></i>Contact Us</a></li>
+      </ul>
+    </div>
+
+    <!-- Col 3: Contact Info -->
+    <div>
+      <h4 style="font-size: 1.05rem; font-weight: 700; color: #fff; margin-bottom: 16px; border-left: 3px solid #00AEEF; padding-left: 10px;">Contact Us</h4>
+      <p style="font-size: 0.88rem; color: #94a3b8; line-height: 1.6; margin-bottom: 12px;">
+        <strong style="color: #e2e8f0;">Address:</strong><br>
+        S. No. 46/2/1, Near Dhayari Bridge, Narhe Road, Narhe, Pune - 411041, Maharashtra, India.
+      </p>
+      <p style="font-size: 0.88rem; color: #94a3b8; line-height: 1.6; margin-bottom: 8px;">
+        <strong style="color: #e2e8f0;">Phone:</strong><br>
+        <a href="tel:+919607806010" style="color: #00AEEF; text-decoration: none;">+91 96078 06010</a>
+      </p>
+      <p style="font-size: 0.88rem; color: #94a3b8; line-height: 1.6;">
+        <strong style="color: #e2e8f0;">Email:</strong><br>
+        <!--email_off--><a href="mailto:designatscreensource@gmail.com" style="color: #00AEEF; text-decoration: none;">designatscreensource@gmail.com</a><!--/email_off-->
+      </p>
+    </div>
+
+    <!-- Col 4: Location Map -->
+    <div>
+      <h4 style="font-size: 1.05rem; font-weight: 700; color: #fff; margin-bottom: 16px; border-left: 3px solid #EC008C; padding-left: 10px;">Our Location</h4>
+      <div style="border-radius: 12px; overflow: hidden; box-shadow: 0 4px 18px rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.1);">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4076.981068331639!2d73.82156955678097!3d18.45287803884138!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2ebe0e1a971a7%3A0xc57ef565c9bca873!2sSCREENSOURCE!5e1!3m2!1sen!2sin!4v1793437765544!5m2!1sen!2sin" width="100%" height="150" style="border:0; display:block;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+      </div>
+      <div style="margin-top: 12px; display: flex; gap: 10px;">
+        <a href="https://www.instagram.com/screensource_india/?hl=en" target="_blank" style="width: 32px; height: 32px; border-radius: 50%; background: rgba(255,255,255,0.08); display: flex; align-items: center; justify-content: center; color: #fff; text-decoration: none; transition: background 0.2s;"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.facebook.com/ScreensourcePune/" target="_blank" style="width: 32px; height: 32px; border-radius: 50%; background: rgba(255,255,255,0.08); display: flex; align-items: center; justify-content: center; color: #fff; text-decoration: none; transition: background 0.2s;"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://wa.me/919607806010" target="_blank" style="width: 32px; height: 32px; border-radius: 50%; background: rgba(255,255,255,0.08); display: flex; align-items: center; justify-content: center; color: #25D366; text-decoration: none; transition: background 0.2s;" rel="nofollow noopener noreferrer"><i class="fab fa-whatsapp"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <div style="max-width: 1240px; margin: 40px auto 0; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.06); display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; font-size: 0.82rem; color: #64748b;">
+    <p>&copy; 2026 Screensource Pune. All Rights Reserved.</p>
+    <p>Premium Screen Printing Solutions & Industrial Materials</p>
+  </div>
+</footer>
+
+</body>
+</html>

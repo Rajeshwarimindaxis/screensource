@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="robots" content="index, follow" />
+  <meta name="revisit-after" content="7 days" />
+  <title>Screen Printing Services - Screensource</title>
+  <link rel="icon" type="image/webp" href="images/logo-final.webp">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #f8fafc;
+      color: #1e293b;
+      overflow-x: hidden;
+    }
+    .services-hero {
+      background: linear-gradient(135deg, #0b1120 0%, #1e293b 100%);
+      color: #fff;
+      padding: 70px 24px;
+      text-align: center;
+      position: relative;
+    }
+    .service-badge {
+      display: inline-block;
+      background: rgba(0, 174, 239, 0.15);
+      border: 1px solid rgba(0, 174, 239, 0.4);
+      color: #00AEEF;
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      padding: 6px 18px;
+      border-radius: 30px;
+      margin-bottom: 16px;
+    }
+    .service-h1 {
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      font-weight: 800;
+      background: linear-gradient(90deg, #ffffff, #00AEEF);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 16px;
+    }
+    .service-sub {
+      font-size: 1.05rem;
+      color: #cbd5e1;
+      max-width: 780px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+    .service-grid {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 60px 24px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+      gap: 36px;
+    }
+    .service-card {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.05);
+      transition: all 0.35s ease;
+      display: flex;
+      flex-direction: column;
+    }
+    .service-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 40px rgba(0, 174, 239, 0.16);
+      border-color: #00AEEF;
+    }
+    .service-img-wrap {
+      height: 240px;
+      background: #f1f5f9;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+    .service-img-wrap img {
+      max-height: 100%;
+      max-width: 100%;
+      object-fit: contain;
+    }
+    .service-card-body {
+      padding: 30px 28px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .service-title {
+      font-size: 1.45rem;
+      font-weight: 800;
+      color: #0f172a;
+      margin-bottom: 12px;
+    }
+    .service-desc {
+      font-size: 0.95rem;
+      color: #64748b;
+      line-height: 1.65;
+      margin-bottom: 24px;
+    }
+    .service-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      background: linear-gradient(90deg, #00AEEF, #0077b6);
+      color: #fff;
+      font-weight: 700;
+      font-size: 0.95rem;
+      padding: 13px 26px;
+      border-radius: 40px;
+      text-decoration: none;
+      transition: all 0.25s ease;
+    }
+    .service-btn:hover {
+      background: linear-gradient(90deg, #ed1607, #EC008C);
+      transform: scale(1.02);
+    }
+  
+      /* Integrated Hero Breadcrumb - Premium Glassmorphism Pill Design */
+  .hero-breadcrumb {
+    margin-bottom: 22px;
+    display: flex;
+    justify-content: flex-start;
+    position: relative;
+    z-index: 5;
+  }
+  .brands-hero .hero-breadcrumb,
+  .machines-hero .hero-breadcrumb,
+  .services-hero .hero-breadcrumb,
+  .machine-hero .hero-breadcrumb,
+  .hero-section .hero-breadcrumb,
+  .hero-exposing-compact .hero-breadcrumb,
+  .hero .hero-breadcrumb,
+  .three-m-hero .hero-breadcrumb,
+  .avery-hero .hero-breadcrumb,
+  .orafol-hero .hero-breadcrumb,
+  .technova-hero .hero-breadcrumb,
+  .poly-hero .hero-breadcrumb,
+  .yessor-hero .hero-breadcrumb,
+  .printcolor-hero .hero-breadcrumb,
+  .sunsui-hero .hero-breadcrumb,
+  .nittoku-hero .hero-breadcrumb,
+  .nitto-hero .hero-breadcrumb,
+  .nontear-hero .hero-breadcrumb,
+  .synthetic-hero .hero-breadcrumb,
+  .specialty-hero .hero-breadcrumb,
+  .signage-hero .hero-breadcrumb,
+  .stretching-hero .hero-breadcrumb,
+  .contact-hero .hero-breadcrumb,
+  #contact-us .hero-breadcrumb {
+    justify-content: center;
+  }
+  .hero-breadcrumb ol {
+    display: inline-flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    list-style: none;
+    padding: 7px 18px;
+    margin: 0;
+    font-size: 0.85rem;
+    font-weight: 500;
+    font-family: 'Poppins', sans-serif;
+    background: rgba(11, 17, 32, 0.85);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border: 1.5px solid rgba(0, 174, 239, 0.45);
+    border-radius: 50px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35), 0 0 16px rgba(0, 174, 239, 0.18);
+  }
+  .hero-breadcrumb li {
+    display: inline-flex;
+    align-items: center;
+  }
+  .hero-breadcrumb a {
+    color: #f1f5f9 !important;
+    -webkit-text-fill-color: #f1f5f9 !important;
+    text-decoration: none;
+    transition: all 0.25s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-weight: 500;
+    padding: 2px 6px;
+    border-radius: 4px;
+  }
+  .hero-breadcrumb a i.fa-home {
+    color: #00AEEF;
+    font-size: 0.92rem;
+    transition: transform 0.2s ease, color 0.2s ease;
+  }
+  .hero-breadcrumb a:hover {
+    color: #38bdf8 !important;
+    -webkit-text-fill-color: #38bdf8 !important;
+    text-decoration: none;
+    transform: translateY(-1px);
+  }
+  .hero-breadcrumb a:hover i.fa-home {
+    transform: scale(1.15);
+    color: #38bdf8;
+  }
+  .hero-breadcrumb .separator {
+    color: rgba(0, 174, 239, 0.75);
+    font-size: 0.62rem;
+    display: inline-flex;
+    align-items: center;
+    margin: 0 1px;
+  }
+  .hero-breadcrumb .current {
+    color: #00e5ff !important;
+    -webkit-text-fill-color: #00e5ff !important;
+    font-weight: 600;
+    background: rgba(0, 174, 239, 0.18);
+    padding: 3px 12px;
+    border-radius: 30px;
+    border: 1px solid rgba(0, 174, 239, 0.35);
+    box-shadow: 0 2px 8px rgba(0, 174, 239, 0.2);
+    letter-spacing: 0.2px;
+  }
+  #contact-us .hero-breadcrumb ol {
+    background: rgba(255, 255, 255, 0.95);
+    border: 1.5px solid rgba(0, 174, 239, 0.45);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08), 0 0 14px rgba(0, 174, 239, 0.18);
+  }
+  #contact-us .hero-breadcrumb a {
+    color: #1e293b !important;
+    -webkit-text-fill-color: #1e293b !important;
+  }
+  #contact-us .hero-breadcrumb a:hover {
+    color: #00AEEF !important;
+    -webkit-text-fill-color: #00AEEF !important;
+  }
+  #contact-us .hero-breadcrumb a i.fa-home {
+    color: #00AEEF;
+  }
+  #contact-us .hero-breadcrumb .separator {
+    color: #00AEEF;
+    opacity: 0.85;
+  }
+  #contact-us .hero-breadcrumb .current {
+    color: #0284c7 !important;
+    -webkit-text-fill-color: #0284c7 !important;
+    background: rgba(0, 174, 239, 0.12);
+    border: 1px solid rgba(0, 174, 239, 0.35);
+    box-shadow: 0 2px 8px rgba(0, 174, 239, 0.15);
+  }
+  .ss-breadcrumb-nav {
+    display: none !important;
+  }
+
+</style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <script src="navbar.js?v=2.0"></script>
+
+<!-- Hero Section -->
+  <section class="services-hero">
+        <nav class="hero-breadcrumb" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+        <li class="separator"><i class="fas fa-chevron-right"></i></li>
+        <li class="current" aria-current="page">Screen Services</li>
+      </ol>
+    </nav>
+<span class="service-badge">Precision Technical Support</span>
+    <h1 class="service-h1">Screen Printing Services</h1>
+    <p class="service-sub">State-of-the-art screen preparation, pneumatic stretching, and high-resolution UV stencil exposing executed by experienced technicians in Narhe, Pune.</p>
+  </section>
+
+  <!-- Service Cards -->
+  <main class="service-grid">
+
+    <!-- Service 1: Screen Stretching -->
+    <div class="service-card">
+      <div class="service-img-wrap">
+        <img src="images/screen-printing-products/screen-stretching-attractive.webp" alt="Screen Stretching Services" loading="lazy" decoding="async">
+      </div>
+      <div class="service-card-body">
+        <div>
+          <h2 class="service-title">Screen Stretching Services</h2>
+          <p class="service-desc">Pneumatic tensioning across aluminium and steel frames delivering exact tension tolerances (up to 40+ N/cm) with zero tension drop for high-registration printing.</p>
+          <ul style="color: #475569; font-size: 0.9rem; margin-bottom: 24px; line-height: 1.8; padding-left: 20px;">
+            <li>Calibrated mechanical tension meters</li>
+            <li>High-strength 2-part polyurethane adhesives</li>
+            <li>Zero frame deflection guarantee</li>
+          </ul>
+        </div>
+        <a href="stretching.html" class="service-btn">Explore Stretching Services &rarr;</a>
+      </div>
+    </div>
+
+    <!-- Service 2: Screen Exposing -->
+    <div class="service-card">
+      <div class="service-img-wrap">
+        <img src="images/screen-printing-products/screen-exposing-services.webp" alt="Screen Exposing Services" loading="lazy" decoding="async">
+      </div>
+      <div class="service-card-body">
+        <div>
+          <h2 class="service-title">Screen Exposing Services</h2>
+          <p class="service-desc">High-precision UV vacuum exposing for micro-line resolution, halftone stencils, and industrial membrane switch layouts with sharp edge definition.</p>
+          <ul style="color: #475569; font-size: 0.9rem; margin-bottom: 24px; line-height: 1.8; padding-left: 20px;">
+            <li>Deep vacuum frame for 100% film-to-mesh contact</li>
+            <li>Fine detail reproduction down to 50 microns</li>
+            <li>Pre-coated dual-cure & photopolymer emulsions</li>
+          </ul>
+        </div>
+        <a href="exposing.html" class="service-btn">Explore Exposing Services &rarr;</a>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Modern Unified Footer -->
+  <!-- Modern Unified Footer -->
+<footer style="background: linear-gradient(180deg, #0e131f 0%, #080b12 100%); color: #e2e8f0; font-family: 'Poppins', sans-serif; padding: 60px 20px 24px; border-top: 1px solid rgba(255,255,255,0.08); position: relative; z-index: 10;">
+  <div style="max-width: 1240px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 40px; align-items: start;">
+
+    <!-- Col 1: Brand & About -->
+    <div>
+      <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 16px;">
+        <img src="images/logo-final.webp" alt="Screensource Logo" style="height: 52px; width: auto; object-fit: contain; background: rgba(255,255,255,0.95); padding: 4px 10px; border-radius: 8px;" loading="eager" decoding="async">
+      </div>
+      <p style="font-size: 0.9rem; line-height: 1.6; color: #94a3b8; margin-bottom: 20px;">
+        Screensource is your premier one-stop destination for high-precision screen printing materials, technical films, meshes, adhesives, and state-of-the-art machinery in Narhe, Pune, India.
+      </p>
+      <a href="https://maps.google.com/?cid=14231081690062432371" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; gap: 8px; background: linear-gradient(90deg, #00AEEF, #0077b6); color: #fff; font-size: 0.85rem; font-weight: 600; padding: 9px 18px; border-radius: 30px; text-decoration: none; box-shadow: 0 4px 14px rgba(0, 174, 239, 0.3); transition: transform 0.2s;">
+        <i class="fab fa-google"></i> Review Us on Google
+      </a>
+    </div>
+
+    <!-- Col 2: Quick Links -->
+    <div>
+      <h4 style="font-size: 1.05rem; font-weight: 700; color: #fff; margin-bottom: 16px; border-left: 3px solid #ed1607; padding-left: 10px;">Quick Links</h4>
+      <ul style="list-style: none; padding: 0; margin: 0; line-height: 2;">
+        <li><a href="index.html" style="color: #94a3b8; text-decoration: none; font-size: 0.9rem; transition: color 0.2s;"><i class="fas fa-chevron-right" style="font-size: 10px; color: #00AEEF; margin-right: 8px;"></i>Home</a></li>
+        <li><a href="about-us.html" style="color: #94a3b8; text-decoration: none; font-size: 0.9rem; transition: color 0.2s;"><i class="fas fa-chevron-right" style="font-size: 10px; color: #00AEEF; margin-right: 8px;"></i>About Us</a></li>
+        <li><a href="brands.html" style="color: #94a3b8; text-decoration: none; font-size: 0.9rem; transition: color 0.2s;"><i class="fas fa-chevron-right" style="font-size: 10px; color: #00AEEF; margin-right: 8px;"></i>Our Brands</a></li>
+        <li><a href="services.html" style="color: #94a3b8; text-decoration: none; font-size: 0.9rem; transition: color 0.2s;"><i class="fas fa-chevron-right" style="font-size: 10px; color: #00AEEF; margin-right: 8px;"></i>Services</a></li>
+        <li><a href="machines.html" style="color: #94a3b8; text-decoration: none; font-size: 0.9rem; transition: color 0.2s;"><i class="fas fa-chevron-right" style="font-size: 10px; color: #00AEEF; margin-right: 8px;"></i>Machines</a></li>
+        <li><a href="contact.html" style="color: #94a3b8; text-decoration: none; font-size: 0.9rem; transition: color 0.2s;"><i class="fas fa-chevron-right" style="font-size: 10px; color: #00AEEF; margin-right: 8px;"></i>Contact Us</a></li>
+      </ul>
+    </div>
+
+    <!-- Col 3: Contact Info -->
+    <div>
+      <h4 style="font-size: 1.05rem; font-weight: 700; color: #fff; margin-bottom: 16px; border-left: 3px solid #00AEEF; padding-left: 10px;">Contact Us</h4>
+      <p style="font-size: 0.88rem; color: #94a3b8; line-height: 1.6; margin-bottom: 12px;">
+        <strong style="color: #e2e8f0;">Address:</strong><br>
+        S. No. 46/2/1, Near Dhayari Bridge, Narhe Road, Narhe, Pune - 411041, Maharashtra, India.
+      </p>
+      <p style="font-size: 0.88rem; color: #94a3b8; line-height: 1.6; margin-bottom: 8px;">
+        <strong style="color: #e2e8f0;">Phone:</strong><br>
+        <a href="tel:+919607806010" style="color: #00AEEF; text-decoration: none;">+91 96078 06010</a>
+      </p>
+      <p style="font-size: 0.88rem; color: #94a3b8; line-height: 1.6;">
+        <strong style="color: #e2e8f0;">Email:</strong><br>
+        <!--email_off--><a href="mailto:designatscreensource@gmail.com" style="color: #00AEEF; text-decoration: none;">designatscreensource@gmail.com</a><!--/email_off-->
+      </p>
+    </div>
+
+    <!-- Col 4: Location Map -->
+    <div>
+      <h4 style="font-size: 1.05rem; font-weight: 700; color: #fff; margin-bottom: 16px; border-left: 3px solid #EC008C; padding-left: 10px;">Our Location</h4>
+      <div style="border-radius: 12px; overflow: hidden; box-shadow: 0 4px 18px rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.1);">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4076.981068331639!2d73.82156955678097!3d18.45287803884138!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2ebe0e1a971a7%3A0xc57ef565c9bca873!2sSCREENSOURCE!5e1!3m2!1sen!2sin!4v1793437765544!5m2!1sen!2sin" width="100%" height="150" style="border:0; display:block;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+      </div>
+      <div style="margin-top: 12px; display: flex; gap: 10px;">
+        <a href="https://www.instagram.com/screensource_india/?hl=en" target="_blank" style="width: 32px; height: 32px; border-radius: 50%; background: rgba(255,255,255,0.08); display: flex; align-items: center; justify-content: center; color: #fff; text-decoration: none; transition: background 0.2s;"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.facebook.com/ScreensourcePune/" target="_blank" style="width: 32px; height: 32px; border-radius: 50%; background: rgba(255,255,255,0.08); display: flex; align-items: center; justify-content: center; color: #fff; text-decoration: none; transition: background 0.2s;"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://wa.me/919607806010" target="_blank" style="width: 32px; height: 32px; border-radius: 50%; background: rgba(255,255,255,0.08); display: flex; align-items: center; justify-content: center; color: #25D366; text-decoration: none; transition: background 0.2s;" rel="nofollow noopener noreferrer"><i class="fab fa-whatsapp"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <div style="max-width: 1240px; margin: 40px auto 0; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.06); display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; font-size: 0.82rem; color: #64748b;">
+    <p>&copy; 2026 Screensource Pune. All Rights Reserved.</p>
+    <p>Premium Screen Printing Solutions & Industrial Materials</p>
+  </div>
+</footer>
+
+</body>
+</html>
+
+</body>
+</html>

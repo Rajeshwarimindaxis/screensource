@@ -1,0 +1,52 @@
+# Screensource Apache Rules & Error Resolvers
+ErrorDocument 404 /index.html
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+
+  # Immediate redirect if ScreenSource-main is typed in URL
+  RewriteRule ^ScreenSource-main(?:/.*)?$ /index.html [R=302,L,NC]
+
+  # Resolve Cloudflare email obfuscation crawler error
+  RewriteRule ^cdn-cgi/l/email-protection /contact.html [R=301,L,NC]
+
+  # Resolve legacy image1 / image2 crawler 404s
+  RewriteRule ^images/image1\.(jpg|jpeg|webp)$ /images/image1.webp [L,NC]
+  RewriteRule ^images/image2\.(jpg|jpeg|webp)$ /images/image2.webp [L,NC]
+
+  # Resolve legacy speciality_media crawler 404s
+  RewriteRule ^speciality_media/0004480.*$ /speciality-media/0005774-novalife-clarus-pet-125-ss-clarus-125-550-1.webp [R=301,L,NC]
+  RewriteRule ^speciality_media/0004486.*$ /speciality-media/0004514-novalife-translucent-pet-110-ds-lmt-5104.webp [R=301,L,NC]
+  RewriteRule ^speciality-media/0004480.*$ /speciality-media/0005774-novalife-clarus-pet-125-ss-clarus-125-550-1.webp [R=301,L,NC]
+  RewriteRule ^speciality-media/0004486.*$ /speciality-media/0004514-novalife-translucent-pet-110-ds-lmt-5104.webp [R=301,L,NC]
+
+  # Resolve Sabic 404
+  RewriteRule ^Sabic/?$ /sabic.html [R=301,L,NC]
+  RewriteRule ^Sabic\.html$ /sabic.html [R=301,L,NC]
+
+  # Redirect old uppercase / underscore URLs to clean hyphenated URLs
+  RewriteRule ^About_US\.html$ /about-us.html [R=301,L,NC]
+  RewriteRule ^Contact\.html$ /contact.html [R=301,L,NC]
+  RewriteRule ^Sabic_Polycarbonate\.html$ /sabic-polycarbonate.html [R=301,L,NC]
+  RewriteRule ^Industrial_Polyester_Films\.html$ /industrial-polyester-films.html [R=301,L,NC]
+  RewriteRule ^MAC_DERMIDE\.html$ /macdermid.html [R=301,L,NC]
+  RewriteRule ^MAchine_Stre\.html$ /machine-stretching.html [R=301,L,NC]
+  RewriteRule ^Machines_EXPO\.html$ /machines-exposing.html [R=301,L,NC]
+  RewriteRule ^Pre-Press_Emulsions_&_Chemicals\.html$ /pre-press-emulsions-chemicals.html [R=301,L,NC]
+  RewriteRule ^Printing_Chemicals\.html$ /printing-chemicals.html [R=301,L,NC]
+  RewriteRule ^Release_Papers\.html$ /release-papers.html [R=301,L,NC]
+  RewriteRule ^Velvet_Films\.html$ /velvet-films.html [R=301,L,NC]
+  RewriteRule ^Vinyl_for_Industrial_Printing\.html$ /vinyl-for-industrial-printing.html [R=301,L,NC]
+  RewriteRule ^Aluminium_Screen_Printing_Frames\.html$ /aluminium-screen-printing-frames.html [R=301,L,NC]
+  RewriteRule ^Surface_Protection_Films\.html$ /surface-protection-films.html [R=301,L,NC]
+  RewriteRule ^non_tear_films\.html$ /non-tear-films.html [R=301,L,NC]
+  RewriteRule ^speciality_media\.html$ /speciality-media.html [R=301,L,NC]
+  RewriteRule ^synthetic_paper\.html$ /synthetic-paper.html [R=301,L,NC]
+  RewriteRule ^Signage_Print_Media\.html$ /signage-print-media.html [R=301,L,NC]
+
+  # Redirect any non-existent file or directory to /index.html
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule ^.+$ /index.html [R=302,L]
+</IfModule>

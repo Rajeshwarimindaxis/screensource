@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="robots" content="index, follow" />
+  <meta name="revisit-after" content="7 days" />
+  <title>Screensource - One Stop Solution</title>
+  <link rel="icon" type="image/webp" href="images/logo-final.webp">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
+  <!-- Swiper CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+  <!-- Include in <head> -->
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #ffffff;
+  color: #222;
+  overflow-x: hidden;
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+}
+
+p {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  line-height: 1.7;
+}
+</style>
+
+<!-- NAVBAR SECTION START -->
+<script src="navbar.js?v=2.0"></script>
+<!-- NAVBAR SECTION END -->
+
+<!-- HERO SECTION START -->
+<section style="
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: url('images/herosection.webp') no-repeat center center/cover;
+  text-align: center;
+  color: #444;
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  z-index: -1;
+">
+  <!-- Overlay -->
+  <div style="
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 1;
+  "></div>
+
+  <!-- Content -->
+  <div style="position: relative; z-index: 2; max-width: 900px; padding: 20px;">
+    <h1 style="
+      font-size: 3rem;
+      font-weight: 800;
+    background: linear-gradient(to right, #ffffff, #ffccf9);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 20px;
+    ">
+      Premium Screen Printing Materials & Services
+    </h1>
+
+    <p style="
+      font-size: 1.2rem;
+      color:linear-gradient(to right, #ffffff, #ffccf9);
+      max-width: 700px;
+      margin: 0 auto 40px;
+    ">
+      Explore our extensive range of high-performance films, emulsions, squeegees, and technical services tailored for industrial and commercial screen printing excellence.
+    </p>
+
+    <div style="margin-top: 20px;">
+      <button onclick="scrollToProducts()" style="
+        padding: 14px 28px;
+        font-size: 1rem;
+        background: #00b5e2;
+        color: #444;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        margin: 0 10px;
+        transition: 0.3s;
+      ">View Products</button>
+
+      <button onclick="scrollToServices()" style="
+        padding: 14px 28px;
+        font-size: 1rem;
+        background: #EC008C;
+        color: #444;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        margin: 0 10px;
+        transition: 0.3s;
+      ">Our Services</button>
+    </div>
+  </div>
+</section>
+
+<!-- Hero Placeholder -->
+<div class="hero-placeholder" style="height: 100vh;"></div>
+
+<!-- HERO SECTION END -->
+
+    <!-- About Section --><!-- About Section -->
+<!-- About Section -->
+<section id="about" style="padding: 100px 20px; background: linear-gradient(to bottom, #f5f8ff, #e2ebf7); font-family: 'Arimo', sans-serif;">
+  <div class="about-wrapper" style="max-width: 1200px; margin: auto; display: flex; flex-wrap: wrap; align-items: center; gap: 50px;">
+
+    <!-- Text Content -->
+    <div class="about-text" style="flex: 1; min-width: 300px; opacity: 0; transform: translateY(50px); transition: all 0.8s ease;">
+      <h2 style="font-size: 2.4rem; color: #0d2f53; margin-bottom: 20px; font-weight: 800;">
+        Your Trusted Partner in <span style="color: #00b5e2;">Screen Printing</span> Solutions
+      </h2>
+      <p style="font-size: 1.1rem; color: #333; line-height: 1.8;">
+        With years of expertise, we deliver industry-grade screen printing supplies � from high-precision emulsions and durable squeegees to mesh fabrics and reclaiming services. Whether you're a startup or an established brand, our support scales with your vision.
+      </p>
+      <ul style="margin-top: 25px; color: #333; font-size: 1rem; line-height: 1.8; padding-left: 20px;">
+        <li>? <strong>Top-tier emulsions & stencils</strong></li>
+        <li>? <strong>Durable & ergonomic squeegees</strong></li>
+        <li>? <strong>Custom film output solutions</strong></li>
+        <li>? <strong>Expert technical support</strong></li>
+      </ul>
+    </div>
+
+    <!-- Image -->
+    <div class="about-image" style="flex: 1; min-width: 300px; text-align: center; opacity: 0; transform: translateY(50px); transition: all 0.8s ease;">
+      <img src="images/section-02.webp" alt="Screen Printing Materials" style="width: 100%; max-width: 500px; border-radius: 20px; box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);" / loading="lazy" decoding="async">
+    </div>
+
+  </div>
+</section>
+
+<!-- Optional GSAP Reveal Animation -->
+<script>
+  window.addEventListener('load', () => {
+    const aboutText = document.querySelector('.about-text');
+    const aboutImage = document.querySelector('.about-image');
+
+    // Reveal with GSAP if included, else use native JS
+    if (typeof gsap !== 'undefined') {
+      gsap.to(aboutText, { opacity: 1, y: 0, duration: 0.8, delay: 0.3, ease: 'power3.out' });
+      gsap.to(aboutImage, { opacity: 1, y: 0, duration: 0.8, delay: 0.5, ease: 'power3.out' });
+    } else {
+      aboutText.style.opacity = '1';
+      aboutText.style.transform = 'translateY(0)';
+      aboutImage.style.opacity = '1';
+      aboutImage.style.transform = 'translateY(0)';
+    }
+  });
+</script>
+
+<section id="our-services" style="margin:0; padding:0; font-family:'Poppins', sans-serif; background: linear-gradient(to bottom, #f5f8ff, #e2ebf7); overflow: hidden;">
+  <!-- Heading -->
+  <div style="text-align:center; padding: 80px 20px 30px;">
+    <h2 style="font-size:3rem; background:linear-gradient(90deg,#00b5e2,#EC008C); -webkit-background-clip:text; color:transparent; font-weight:700; margin: 0;">
+      Our Services
+    </h2>
+  </div>
+
+  <!-- Services Grid -->
+  <div style="max-width:1200px; margin:auto; display:grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 40px; padding: 40px 30px;">
+    <style>
+      .service-card {
+        background: rgba(255,255,255,0.25);
+        backdrop-filter: blur(10px);
+        border-radius: 20px;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+        padding: 30px 25px;
+        text-align: center;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+      .service-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 16px 40px rgba(0,0,0,0.12);
+      }
+      .service-card h3 {
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: #0d2f53;
+        margin: 20px 0 10px;
+      }
+      .service-card p {
+        font-size: 0.9rem;
+        color: #444;
+        line-height: 1.5;
+      }
+      .service-icon {
+        font-size: 28px;
+        width: 60px;
+        height: 60px;
+        margin: 0 auto 15px;
+        border-radius: 50%;
+        background: linear-gradient(90deg,#00b5e2,#EC008C);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #444;
+      }
+      .service-card a {
+        color: inherit;
+        text-decoration: none;
+      }
+    </style>
+
+    <!-- Cards -->
+    <div class="service-card"><a href="#"><div class="service-icon">??</div><h3>Industrial Polyester Films</h3><p>We deal in high-performance polyester films used for industrial printing and fabrication.</p></a></div>
+    <div class="service-card"><a href="#"><div class="service-icon">???</div><h3>Stretching, Exposing, Printing & Drying Machines</h3><p>All essential machines for screen printing from pre-press to final cure.</p></a></div>
+    <div class="service-card"><a href="#"><div class="service-icon">???</div><h3>Screen Stretching Service</h3><p>High-tension screen stretching for consistent mesh tension and durability.</p></a></div>
+    <div class="service-card"><a href="#"><div class="service-icon">??</div><h3>Screen Exposing Service</h3><p>Accurate exposure using calibrated equipment for sharp image transfer.</p></a></div>
+    <div class="service-card"><a href="#"><div class="service-icon">??</div><h3>Custom Ink Matching</h3><p>Color-matched industrial inks tailored to your exact print application.</p></a></div>
+    <div class="service-card"><a href="#"><div class="service-icon">??</div><h3>Mesh</h3><p>High-quality mesh rolls and pre-cut frames suitable for all printing demands.</p></a></div>
+    <div class="service-card"><a href="#"><div class="service-icon">??</div><h3>Frame Adhesive</h3><p>Reliable bonding solutions for long-lasting frame & mesh adhesion.</p></a></div>
+    <div class="service-card"><a href="#"><div class="service-icon">??</div><h3>SABIC Polycarbonate Films</h3><p>Durable and optical-grade films ideal for membrane switch and overlays.</p></a></div>
+    <div class="service-card"><a href="#"><div class="service-icon">??</div><h3>Pre-Press Emulsions & Chemicals</h3><p>All chemicals required for stencil making and screen reclamation.</p></a></div>
+    <div class="service-card"><a href="#"><div class="service-icon">??</div><h3>Squeegee Rubber</h3><p>Premium squeegee blades in multiple profiles and hardness levels.</p></a></div>
+    <div class="service-card"><a href="#"><div class="service-icon">??</div><h3>Adhesive Tapes</h3><p>Industrial tapes for screen alignment, masking, and secure prints.</p></a></div>
+    <div class="service-card"><a href="#"><div class="service-icon">??</div><h3>Vinyl for Printing</h3><p>High-grade printable vinyls for durable industrial applications.</p></a></div>
+    <div class="service-card"><a href="#"><div class="service-icon">??</div><h3>Spacer Tapes (DSM7 & DSM)</h3><p>Precision-cut spacer tapes ideal for membrane switches and spacing.</p></a></div>
+    <div class="service-card"><a href="#"><div class="service-icon">???</div><h3>Surface Protection Films</h3><p>Protective films that prevent damage during production & handling.</p></a></div>
+    <div class="service-card"><a href="#"><div class="service-icon">??</div><h3>Release Papers</h3><p>High-performance liners used in printing and lamination processes.</p></a></div>
+    <div class="service-card"><a href="#"><div class="service-icon">??</div><h3>Tension Meter</h3><p>Measure mesh tension accurately for optimal screen print results.</p></a></div>
+    <div class="service-card"><a href="#"><div class="service-icon">??</div><h3>Cross Hatch & Hardness Tester</h3><p>Tools to test adhesion and film hardness with industry standard checks.</p></a></div>
+    <div class="service-card"><a href="#"><div class="service-icon">??</div><h3>Squeegee Hardness Meter</h3><p>Precision hardness testing for squeegee blade quality control.</p></a></div>
+    <div class="service-card"><a href="#"><div class="service-icon">??</div><h3>Sticky Mats</h3><p>Dust-control mats for maintaining clean print zones and labs.</p></a></div>
+    <div class="service-card"><a href="#"><div class="service-icon">??</div><h3>Printing Accessories</h3><p>Essential accessories used across all screen printing operations.</p></a></div>
+    <div class="service-card"><a href="#"><div class="service-icon">??</div><h3>Lint-Free Wipes</h3><p>Non-abrasive cleaning wipes to keep screens and surfaces spotless.</p></a></div>
+    <div class="service-card"><a href="#"><div class="service-icon">??</div><h3>RAL & Pantone Guides</h3><p>Standardized color reference guides for accurate color matching.</p></a></div>
+    <div class="service-card"><a href="#"><div class="service-icon">???</div><h3>Technical Guidance</h3><p>Expert advice on screen printing setup, chemicals, and production flow.</p></a></div>
+  </div>
+</section>
+
+<!-- Testimonial Slider Section -->
+<!-- Testimonial Slider Section -->
+<section id="testimonials" style="background: linear-gradient(to bottom,#e2ebf7, #f5f8ff); color:#333; font-family:'Poppins', sans-serif; padding:100px 20px; position:relative;">
+  <div style="max-width:1300px; margin:auto;">
+    <h2 style="text-align:center; font-size:3rem; background:linear-gradient(90deg,#00b5e2,#EC008C); -webkit-background-clip:text; -webkit-text-fill-color:transparent; margin-bottom:60px;">
+      What Our Clients Say
+    </h2>
+
+    <!-- Swiper -->
+    <div class="swiper testimonial-swiper" style="padding-bottom: 60px;">
+      <div class="swiper-wrapper">
+
+        <!-- Slide 1 -->
+        <div class="swiper-slide" style="background: rgba(255,255,255,0.8); border-radius: 20px; padding: 30px; box-shadow: 0 8px 30px rgba(0,0,0,0.08); transition: transform 0.3s ease;">
+          <p style="font-size:1rem; line-height:1.8;">�The quality and durability of their industrial films exceeded our expectations. Truly professional and timely service!�</p>
+          <h4 style="margin-top:20px; font-size:1.2rem; color:#00b5e2;">Amit Sharma</h4>
+          <span style="font-size:0.9rem; color:#555;">Production Manager, BrightTech</span>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="swiper-slide" style="background: rgba(255,255,255,0.8); border-radius: 20px; padding: 30px; box-shadow: 0 8px 30px rgba(0,0,0,0.08); transition: transform 0.3s ease;">
+          <p style="font-size:1rem; line-height:1.8;">�Excellent customer support and reliable products. Their film range is unmatched in terms of performance.�</p>
+          <h4 style="margin-top:20px; font-size:1.2rem; color:#EC008C;">Sneha Verma</h4>
+          <span style="font-size:0.9rem; color:#555;">Procurement Head, InnoPlast</span>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="swiper-slide" style="background: rgba(255,255,255,0.8); border-radius: 20px; padding: 30px; box-shadow: 0 8px 30px rgba(0,0,0,0.08); transition: transform 0.3s ease;">
+          <p style="font-size:1rem; line-height:1.8;">�They delivered customized solutions quickly. The Autotex and Autostat films performed flawlessly.�</p>
+          <h4 style="margin-top:20px; font-size:1.2rem; color:#00b5e2;">Ravi Mehta</h4>
+          <span style="font-size:0.9rem; color:#555;">Director, PrintEdge</span>
+        </div>
+
+        <!-- Slide 4 -->
+        <div class="swiper-slide" style="background: rgba(255,255,255,0.8); border-radius: 20px; padding: 30px; box-shadow: 0 8px 30px rgba(0,0,0,0.08); transition: transform 0.3s ease;">
+          <p style="font-size:1rem; line-height:1.8;">�ScreenSource guided us perfectly on the best film choice for our application. Extremely satisfied!�</p>
+          <h4 style="margin-top:20px; font-size:1.2rem; color:#EC008C;">Nikita Rao</h4>
+          <span style="font-size:0.9rem; color:#555;">Founder, Printomate</span>
+        </div>
+
+      </div>
+
+      <!-- Pagination Dots -->
+      <div class="swiper-pagination" style="margin-top:30px;"></div>
+    </div>
+  </div>
+
+  <!-- Swiper Initialization -->
+<script>
+  new Swiper(".testimonial-swiper", {
+    slidesPerView: 1,
+    spaceBetween: 30,
+    loop: true,
+    grabCursor: true,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    breakpoints: {
+      768: {
+        slidesPerView: 2,
+      },
+      1024: {
+        slidesPerView: 3,
+      },
+    },
+  });
+</script>
+  <!-- Script -->
+<!-- jQuery and Slick JS -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+</section>
+
+<!-- jQuery and Slick (if needed elsewhere) -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+<!-- Font Awesome -->
+<style>
+  .modern-footer {
+    background-color: #0B0E14;
+    color: #e0e0e0;
+    padding: 80px 20px 40px;
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+    border-top: none;
+
+  }
+  .modern-footer-container {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 50px;
+  }
+  .modern-footer .brand-title {
+    font-size: 28px;
+    font-weight: 800;
+    margin: 0 0 15px 0;
+    letter-spacing: 0.5px;
+    background: linear-gradient(90deg, #3498db, #9b59b6, #EC008C);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .modern-footer p {
+    font-size: 15px;
+    line-height: 1.7;
+    margin: 0 0 20px 0;
+    color: #a0aab2;
+  }
+  .modern-footer h4 {
+    margin-bottom: 25px;
+    font-size: 18px;
+    color: #ffffff;
+    font-weight: 600;
+    position: relative;
+    padding-bottom: 10px;
+  }
+  .modern-footer h4::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 40px;
+    height: 3px;
+    background: #EC008C;
+    border-radius: 2px;
+  }
+  .modern-footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .modern-footer ul li {
+    margin-bottom: 12px;
+  }
+  .modern-footer ul li a {
+    color: #a0aab2;
+    text-decoration: none;
+    font-size: 15px;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .modern-footer ul li a:hover {
+    color: #00b5e2;
+    transform: translateX(5px);
+  }
+  .footer-socials {
+    display: flex;
+    gap: 15px;
+  }
+  .footer-socials a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: rgba(255,255,255,0.05);
+    color: #ffffff;
+    border-radius: 50%;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-size: 18px;
+  }
+  .footer-socials a:hover {
+    background: linear-gradient(135deg, #00b5e2, #EC008C);
+    transform: translateY(-3px);
+  }
+
+    .google-review-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: #ffffff;
+      color: #202124 !important;
+      padding: 9px 18px;
+      border-radius: 50px;
+      text-decoration: none !important;
+      font-size: 13px;
+      font-weight: 600;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+      transition: all 0.3s ease;
+      margin-top: 10px;
+      margin-bottom: 8px;
+    }
+
+    .google-review-btn:hover {
+      background: #f8f9fa;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(0, 174, 239, 0.4);
+      color: #00AEEF !important;
+    }
+
+    .google-review-btn .google-icon {
+      font-size: 15px;
+      color: #4285F4;
+    }
+
+    .google-review-btn .stars-mini {
+      color: #FBBC05;
+      font-size: 11px;
+      display: flex;
+      gap: 2px;
+    }
+
+  .footer-contact-item {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+    margin-bottom: 15px;
+    color: #a0aab2;
+    font-size: 15px;
+    line-height: 1.6;
+  }
+  .footer-contact-item i {
+    color: #00b5e2;
+    font-size: 18px;
+    margin-top: 3px;
+  }
+  .footer-bottom {
+    text-align: center;
+    padding-top: 30px;
+    margin-top: 50px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    color: #707a82;
+    font-size: 14px;
+  }
+  .footer-bottom strong {
+    color: #a0aab2;
+  }
+</style>
+
+
+  <!-- Modern Unified Footer -->
+  <footer style="background: linear-gradient(180deg, #0e131f 0%, #080b12 100%); color: #e2e8f0; font-family: 'Poppins', sans-serif; padding: 60px 20px 24px; border-top: 1px solid rgba(255,255,255,0.08); position: relative; z-index: 10;">
+  <div style="max-width: 1240px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 40px; align-items: start;">
+
+    <!-- Col 1: Brand & About -->
+    <div>
+      <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 16px;">
+        <img src="images/logo-final.webp" alt="Screensource Logo" style="height: 52px; width: auto; object-fit: contain; background: rgba(255,255,255,0.95); padding: 4px 10px; border-radius: 8px;" loading="eager" decoding="async">
+      </div>
+      <p style="font-size: 0.9rem; line-height: 1.6; color: #94a3b8; margin-bottom: 20px;">
+        Screensource is your premier one-stop destination for high-precision screen printing materials, technical films, meshes, adhesives, and state-of-the-art machinery in Narhe, Pune, India.
+      </p>
+      <a href="https://maps.google.com/?cid=14231081690062432371" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; gap: 8px; background: linear-gradient(90deg, #00AEEF, #0077b6); color: #fff; font-size: 0.85rem; font-weight: 600; padding: 9px 18px; border-radius: 30px; text-decoration: none; box-shadow: 0 4px 14px rgba(0, 174, 239, 0.3); transition: transform 0.2s;">
+        <i class="fab fa-google"></i> Review Us on Google
+      </a>
+    </div>
+
+    <!-- Col 2: Quick Links -->
+    <div>
+      <h4 style="font-size: 1.05rem; font-weight: 700; color: #fff; margin-bottom: 16px; border-left: 3px solid #ed1607; padding-left: 10px;">Quick Links</h4>
+      <ul style="list-style: none; padding: 0; margin: 0; line-height: 2;">
+        <li><a href="index.html" style="color: #94a3b8; text-decoration: none; font-size: 0.9rem; transition: color 0.2s;"><i class="fas fa-chevron-right" style="font-size: 10px; color: #00AEEF; margin-right: 8px;"></i>Home</a></li>
+        <li><a href="about-us.html" style="color: #94a3b8; text-decoration: none; font-size: 0.9rem; transition: color 0.2s;"><i class="fas fa-chevron-right" style="font-size: 10px; color: #00AEEF; margin-right: 8px;"></i>About Us</a></li>
+        <li><a href="brands.html" style="color: #94a3b8; text-decoration: none; font-size: 0.9rem; transition: color 0.2s;"><i class="fas fa-chevron-right" style="font-size: 10px; color: #00AEEF; margin-right: 8px;"></i>Our Brands</a></li>
+        <li><a href="services.html" style="color: #94a3b8; text-decoration: none; font-size: 0.9rem; transition: color 0.2s;"><i class="fas fa-chevron-right" style="font-size: 10px; color: #00AEEF; margin-right: 8px;"></i>Services</a></li>
+        <li><a href="machines.html" style="color: #94a3b8; text-decoration: none; font-size: 0.9rem; transition: color 0.2s;"><i class="fas fa-chevron-right" style="font-size: 10px; color: #00AEEF; margin-right: 8px;"></i>Machines</a></li>
+        <li><a href="contact.html" style="color: #94a3b8; text-decoration: none; font-size: 0.9rem; transition: color 0.2s;"><i class="fas fa-chevron-right" style="font-size: 10px; color: #00AEEF; margin-right: 8px;"></i>Contact Us</a></li>
+      </ul>
+    </div>
+
+    <!-- Col 3: Contact Info -->
+    <div>
+      <h4 style="font-size: 1.05rem; font-weight: 700; color: #fff; margin-bottom: 16px; border-left: 3px solid #00AEEF; padding-left: 10px;">Contact Us</h4>
+      <p style="font-size: 0.88rem; color: #94a3b8; line-height: 1.6; margin-bottom: 12px;">
+        <strong style="color: #e2e8f0;">Address:</strong><br>
+        S. No. 46/2/1, Near Dhayari Bridge, Narhe Road, Narhe, Pune - 411041, Maharashtra, India.
+      </p>
+      <p style="font-size: 0.88rem; color: #94a3b8; line-height: 1.6; margin-bottom: 8px;">
+        <strong style="color: #e2e8f0;">Phone:</strong><br>
+        <a href="tel:+919607806010" style="color: #00AEEF; text-decoration: none;">+91 96078 06010</a>
+      </p>
+      <p style="font-size: 0.88rem; color: #94a3b8; line-height: 1.6;">
+        <strong style="color: #e2e8f0;">Email:</strong><br>
+        <!--email_off--><a href="mailto:designatscreensource@gmail.com" style="color: #00AEEF; text-decoration: none;">designatscreensource@gmail.com</a><!--/email_off-->
+      </p>
+    </div>
+
+    <!-- Col 4: Location Map -->
+    <div>
+      <h4 style="font-size: 1.05rem; font-weight: 700; color: #fff; margin-bottom: 16px; border-left: 3px solid #EC008C; padding-left: 10px;">Our Location</h4>
+      <div style="border-radius: 12px; overflow: hidden; box-shadow: 0 4px 18px rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.1);">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4076.981068331639!2d73.82156955678097!3d18.45287803884138!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2ebe0e1a971a7%3A0xc57ef565c9bca873!2sSCREENSOURCE!5e1!3m2!1sen!2sin!4v1793437765544!5m2!1sen!2sin" width="100%" height="150" style="border:0; display:block;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+      </div>
+      <div style="margin-top: 12px; display: flex; gap: 10px;">
+        <a href="https://www.instagram.com/screensource_india/?hl=en" target="_blank" style="width: 32px; height: 32px; border-radius: 50%; background: rgba(255,255,255,0.08); display: flex; align-items: center; justify-content: center; color: #fff; text-decoration: none; transition: background 0.2s;"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.facebook.com/ScreensourcePune/" target="_blank" style="width: 32px; height: 32px; border-radius: 50%; background: rgba(255,255,255,0.08); display: flex; align-items: center; justify-content: center; color: #fff; text-decoration: none; transition: background 0.2s;"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://wa.me/919607806010" target="_blank" style="width: 32px; height: 32px; border-radius: 50%; background: rgba(255,255,255,0.08); display: flex; align-items: center; justify-content: center; color: #25D366; text-decoration: none; transition: background 0.2s;" rel="nofollow noopener noreferrer"><i class="fab fa-whatsapp"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <div style="max-width: 1240px; margin: 40px auto 0; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.06); display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; font-size: 0.82rem; color: #64748b;">
+    <p>&copy; 2026 Screensource Pune. All Rights Reserved.</p>
+    <p>Premium Screen Printing Solutions & Industrial Materials</p>
+  </div>
+</footer>
+
+<!-- Scroll to Top Button -->
+<button onclick="window.scrollTo({top:0, behavior:'smooth'})"
+  style="position:fixed; bottom:20px; right:20px; background:#00b5e2; color: #444; border:none; border-radius:50%; width:45px; height:45px; cursor:pointer; font-size:18px; z-index:999; display:flex; align-items:center; justify-content:center; box-shadow:0 4px 6px rgba(0,0,0,0.2);">
+  <img src="images/arrow-01.webp" alt="Scroll to top" style="width:22px; height:22px;" loading="lazy" decoding="async">
+</button>
+
+<!-- Floating Call Button -->
+<a href="tel:+919607806010"
+  style="position:fixed; bottom:80px; right:20px; background:#00AEEF; color: #444; border:none; border-radius:50%; width:50px; height:50px; display:flex; align-items:center; justify-content:center; text-decoration:none; box-shadow:0 4px 6px rgba(0,0,0,0.2); z-index:999;">
+  <img src="images/call-01.webp" alt="Call Us" style="width:24px; height:24px;" loading="lazy" decoding="async">
+</a>
+
+<!-- Floating WhatsApp Button -->
+<a href="https://wa.me/919607806010" target="_blank"
+  style="position:fixed; bottom:150px; right:20px; background:#25D366; color: #444; border:none; border-radius:50%; width:50px; height:50px; display:flex; align-items:center; justify-content:center; text-decoration:none; box-shadow:0 4px 6px rgba(0,0,0,0.2); z-index:999;" rel="nofollow noopener noreferrer">
+  <img src="images/whatsapp-01.webp" alt="Chat on WhatsApp" style="width:26px; height:26px;" loading="lazy" decoding="async">
+</a>
+
+</body>
+</html>
+
