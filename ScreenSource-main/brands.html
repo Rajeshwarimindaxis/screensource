@@ -716,6 +716,174 @@
       }
     }
 
+  @media (max-width: 1024px) {
+      .location-columns-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px 20px;
+      }
+    }
+    @media (max-width: 640px) {
+      .location-columns-grid {
+        grid-template-columns: 1fr;
+        gap: 6px;
+      }
+      .location-link-item {
+        padding: 8px 8px;
+      }
+    }
+
+    .location-links-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 10px;
+    }
+
+    .location-link-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 14px;
+      border-radius: 8px;
+      text-decoration: none;
+      color: #334155;
+      font-size: 0.92rem;
+      font-weight: 500;
+      transition: all 0.22s ease;
+      background: #ffffff;
+      border: 1px solid #E2E8F0;
+      min-height: 46px;
+      box-sizing: border-box;
+    }
+
+    .loc-link-left {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .loc-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #00AEEF;
+      flex-shrink: 0;
+      transition: transform 0.22s ease, background-color 0.22s ease;
+    }
+
+    .loc-arrow {
+      color: #94A3B8;
+      font-size: 0.82rem;
+      transition: transform 0.22s ease, color 0.22s ease;
+    }
+
+    .location-link-item:hover {
+      background: #EFF6FF;
+      color: #0077b6;
+      border-color: #00AEEF;
+      font-weight: 600;
+      box-shadow: 0 4px 12px rgba(0, 174, 239, 0.1);
+      transform: translateY(-1px);
+    }
+
+    .location-link-item:hover .loc-dot {
+      background: #0077b6;
+      transform: scale(1.4);
+    }
+
+    .location-link-item:hover .loc-arrow {
+      color: #00AEEF;
+      transform: translateX(4px);
+    }
+
+    .location-link-item.active-location-link {
+      color: #0077b6 !important;
+      font-weight: 700 !important;
+      background: #EFF6FF !important;
+      border-color: #00AEEF !important;
+    }
+
+    .location-link-item.active-location-link .loc-dot {
+      background: #0077b6 !important;
+      transform: scale(1.4);
+    }
+
+    .location-link-item.active-location-link .loc-arrow {
+      color: #00AEEF !important;
+    }
+
+    @media (max-width: 768px) {
+      .simple-content-section {
+        padding: 24px 20px;
+      }
+      .simple-content-section h1 {
+        font-size: 1.65rem;
+      }
+      .simple-content-section h2 {
+        font-size: 1.5rem;
+      }
+      .simple-content-section h3 {
+        font-size: 1.25rem;
+      }
+      .product-detail-hero {
+        padding: 120px 20px 35px 20px;
+      }
+      .product-hero-title {
+        font-size: 1.7rem;
+      }
+      .location-toggle-bar {
+        padding: 10px 18px;
+      }
+      .location-text {
+        font-size: 1.05rem;
+      }
+      .location-btn-badge {
+        padding: 5px 14px;
+        font-size: 0.8rem;
+      }
+      .location-content-panel {
+        padding: 18px 14px;
+      }
+          .location-columns-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px 24px;
+    }
+    .location-links-col {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    @media (max-width: 1024px) {
+      .location-columns-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px 20px;
+      }
+    }
+    @media (max-width: 640px) {
+      .location-columns-grid {
+        grid-template-columns: 1fr;
+        gap: 6px;
+      }
+      .location-link-item {
+        padding: 8px 8px;
+      }
+    }
+
+    .location-links-list {
+        grid-template-columns: 1fr;
+        gap: 8px;
+      }
+      .location-card {
+        padding: 16px 12px;
+      }
+    }
+
   </style>
 </head>
 <body>
@@ -927,6 +1095,7 @@
   <!-- ==========================================
        LOCATION DROPDOWN ACCORDION SECTION (FluidTech Style)
   ========================================== -->
+  <!-- ==================== LOCATION DROPDOWN SECTION ==================== -->
   <section class="location-dropdown-section" id="locationAccordionSection">
     <div class="location-accordion-container">
       <div class="location-accordion-wrapper" id="locationAccordion">
@@ -1136,33 +1305,43 @@
   </div>
 </footer>
 
-  <!-- Accordion Toggle JavaScript -->
+  <!-- Accordion Toggle JavaScript (FluidTech style) -->
   <script>
-    (function() {
-      const tabBtn = document.getElementById('locationsTabBtn');
-      const panel = document.getElementById('locationsPanel');
-      const toggleText = document.getElementById('locationsToggleText');
+    function initLocationAccordion() {
+      const toggleBtn = document.getElementById("locationToggleBtn");
+      const wrapper = document.getElementById("locationAccordion");
+      const btnText = document.getElementById("locationBtnText");
 
-      if (tabBtn && panel) {
-        tabBtn.addEventListener('click', function() {
-          const isOpen = tabBtn.classList.toggle('open');
-          panel.classList.toggle('open', isOpen);
-          tabBtn.setAttribute('aria-expanded', isOpen);
-          if (toggleText) {
-            toggleText.textContent = isOpen ? 'CLICK TO CLOSE' : 'CLICK TO OPEN';
+      if (toggleBtn && wrapper && !toggleBtn.dataset.bound) {
+        toggleBtn.dataset.bound = "true";
+        toggleBtn.addEventListener("click", function(e) {
+          e.preventDefault();
+          const isOpen = wrapper.classList.toggle("open");
+          toggleBtn.setAttribute("aria-expanded", isOpen ? "true" : "false");
+          if (btnText) {
+            btnText.innerHTML = isOpen
+              ? 'Close <i class="fa-solid fa-chevron-up ms-1"></i>'
+              : 'Expand <i class="fa-solid fa-chevron-down ms-1"></i>';
           }
         });
 
-        // Auto expand if user arrives with #locations-we-serve or #locations hash
-        if (window.location.hash === '#locations-we-serve' || window.location.hash === '#locations') {
-          tabBtn.classList.add('open');
-          panel.classList.add('open');
-          tabBtn.setAttribute('aria-expanded', 'true');
-          if (toggleText) toggleText.textContent = 'CLICK TO CLOSE';
+        if (window.location.hash === '#locationAccordionSection' || window.location.hash === '#location' || window.location.hash === '#locations') {
+          wrapper.classList.add('open');
+          toggleBtn.setAttribute('aria-expanded', 'true');
+          if (btnText) btnText.innerHTML = 'Close <i class="fa-solid fa-chevron-up ms-1"></i>';
         }
       }
-    })();
+    }
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", initLocationAccordion);
+    } else {
+      initLocationAccordion();
+    }
   </script>
+
+
+  <!-- Accordion Toggle JavaScript -->
+  
 
 </body>
 </html>

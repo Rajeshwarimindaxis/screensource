@@ -260,7 +260,452 @@
     display: none !important;
   }
 
-</style>
+
+
+    /* ==========================================
+       LOCATION ACCORDION DROPDOWN STYLES
+       ========================================== */
+    .location-dropdown-section {
+      padding: 20px 20px 60px 20px;
+      width: 100%;
+      box-sizing: border-box;
+      background: #f8fafc;
+    }
+
+    .location-accordion-container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .location-accordion-wrapper {
+      width: 100%;
+      margin: 0 auto;
+      border-radius: 50px;
+      transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .location-toggle-bar {
+      width: 100%;
+      background: linear-gradient(135deg, #0077b6 0%, #00AEEF 100%);
+      color: #ffffff;
+      border: none;
+      outline: none;
+      border-radius: 50px;
+      padding: 14px 28px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      cursor: pointer;
+      box-shadow: 0 6px 22px rgba(0, 174, 239, 0.25);
+      transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .location-toggle-bar:hover {
+      background: linear-gradient(135deg, #006296 0%, #009ad4 100%);
+      box-shadow: 0 8px 26px rgba(0, 174, 239, 0.35);
+    }
+
+    .location-accordion-wrapper.open .location-toggle-bar {
+      border-radius: 18px 18px 0 0;
+      box-shadow: 0 4px 15px rgba(0, 174, 239, 0.2);
+    }
+
+    .location-bar-title {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .location-icon-badge {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.22);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+      color: #ffffff;
+      backdrop-filter: blur(4px);
+    }
+
+    .location-text {
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.18rem;
+      font-weight: 700;
+      letter-spacing: 0.4px;
+      color: #ffffff;
+    }
+
+    .location-btn-badge {
+      background: rgba(255, 255, 255, 0.2);
+      border: 1px solid rgba(255, 255, 255, 0.35);
+      color: #ffffff;
+      padding: 6px 20px;
+      border-radius: 50px;
+      font-size: 0.88rem;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      backdrop-filter: blur(4px);
+      transition: all 0.25s ease;
+    }
+
+    .location-toggle-bar:hover .location-btn-badge {
+      background: rgba(255, 255, 255, 0.3);
+      border-color: rgba(255, 255, 255, 0.5);
+    }
+
+    .location-content-panel {
+      display: none;
+      background: #ffffff;
+      border: 1px solid #E2E8F0;
+      border-top: none;
+      border-radius: 0 0 18px 18px;
+      padding: 28px 24px;
+      box-shadow: 0 14px 35px rgba(7, 27, 47, 0.08);
+      box-sizing: border-box;
+    }
+
+    .location-accordion-wrapper.open .location-content-panel {
+      display: block;
+      animation: locPanelSlideDown 0.35s ease-out;
+    }
+
+    @keyframes locPanelSlideDown {
+      from { opacity: 0; transform: translateY(-8px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .location-card {
+      background: #ffffff;
+      border: 1px solid #E2E8F0;
+      border-radius: 16px;
+      padding: 24px 28px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+      transition: all 0.3s ease;
+    }
+
+    .location-card:hover {
+      border-color: #CBD5E1;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+    }
+
+    .location-card-header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.2rem;
+      font-weight: 800;
+      color: #0077b6;
+      letter-spacing: 1px;
+      margin-bottom: 22px;
+      padding-bottom: 14px;
+      border-bottom: 2px solid #E2E8F0;
+    }
+
+    .location-card-header i {
+      color: #00AEEF;
+      font-size: 1.15rem;
+    }
+
+    .location-columns-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px 24px;
+    }
+
+    .location-links-col {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .location-link-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 9px 12px;
+      border-radius: 8px;
+      text-decoration: none;
+      color: #334155;
+      font-size: 0.91rem;
+      font-weight: 500;
+      transition: all 0.2s ease;
+      background: transparent;
+      border: 1px solid transparent;
+      box-sizing: border-box;
+    }
+
+    .loc-link-left {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      line-height: 1.35;
+    }
+
+    .loc-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #00AEEF;
+      flex-shrink: 0;
+      transition: transform 0.22s ease, background-color 0.22s ease;
+    }
+
+    .loc-arrow {
+      color: #94A3B8;
+      font-size: 0.82rem;
+      flex-shrink: 0;
+      margin-left: 8px;
+      transition: transform 0.22s ease, color 0.22s ease;
+    }
+
+    .location-link-item:hover {
+      background: #EFF6FF;
+      color: #0077b6;
+      border-color: #BAE6FD;
+      font-weight: 600;
+      transform: translateX(2px);
+    }
+
+    .location-link-item:hover .loc-dot {
+      background: #0077b6;
+      transform: scale(1.35);
+    }
+
+    .location-link-item:hover .loc-arrow {
+      color: #00AEEF;
+      transform: translateX(4px);
+    }
+
+    .location-link-item.active-location-link {
+      color: #0077b6 !important;
+      font-weight: 700 !important;
+      background: #EFF6FF !important;
+      border-color: #00AEEF !important;
+    }
+
+    .location-link-item.active-location-link .loc-dot {
+      background: #0077b6 !important;
+      transform: scale(1.35);
+    }
+
+    .location-link-item.active-location-link .loc-arrow {
+      color: #00AEEF !important;
+    }
+
+    @media (max-width: 1024px) {
+      .location-columns-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px 20px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .location-toggle-bar {
+        padding: 10px 18px;
+      }
+      .location-text {
+        font-size: 1.05rem;
+      }
+      .location-btn-badge {
+        padding: 5px 14px;
+        font-size: 0.8rem;
+      }
+      .location-content-panel {
+        padding: 18px 14px;
+      }
+      .location-card {
+        padding: 16px 14px;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .location-columns-grid {
+        grid-template-columns: 1fr;
+        gap: 6px;
+      }
+      .location-link-item {
+        padding: 8px 8px;
+      }
+    }
+
+  @media (max-width: 1024px) {
+      .location-columns-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px 20px;
+      }
+    }
+    @media (max-width: 640px) {
+      .location-columns-grid {
+        grid-template-columns: 1fr;
+        gap: 6px;
+      }
+      .location-link-item {
+        padding: 8px 8px;
+      }
+    }
+
+    .location-links-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 10px;
+    }
+
+    .location-link-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 14px;
+      border-radius: 8px;
+      text-decoration: none;
+      color: #334155;
+      font-size: 0.92rem;
+      font-weight: 500;
+      transition: all 0.22s ease;
+      background: #ffffff;
+      border: 1px solid #E2E8F0;
+      min-height: 46px;
+      box-sizing: border-box;
+    }
+
+    .loc-link-left {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .loc-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #00AEEF;
+      flex-shrink: 0;
+      transition: transform 0.22s ease, background-color 0.22s ease;
+    }
+
+    .loc-arrow {
+      color: #94A3B8;
+      font-size: 0.82rem;
+      transition: transform 0.22s ease, color 0.22s ease;
+    }
+
+    .location-link-item:hover {
+      background: #EFF6FF;
+      color: #0077b6;
+      border-color: #00AEEF;
+      font-weight: 600;
+      box-shadow: 0 4px 12px rgba(0, 174, 239, 0.1);
+      transform: translateY(-1px);
+    }
+
+    .location-link-item:hover .loc-dot {
+      background: #0077b6;
+      transform: scale(1.4);
+    }
+
+    .location-link-item:hover .loc-arrow {
+      color: #00AEEF;
+      transform: translateX(4px);
+    }
+
+    .location-link-item.active-location-link {
+      color: #0077b6 !important;
+      font-weight: 700 !important;
+      background: #EFF6FF !important;
+      border-color: #00AEEF !important;
+    }
+
+    .location-link-item.active-location-link .loc-dot {
+      background: #0077b6 !important;
+      transform: scale(1.4);
+    }
+
+    .location-link-item.active-location-link .loc-arrow {
+      color: #00AEEF !important;
+    }
+
+    @media (max-width: 768px) {
+      .simple-content-section {
+        padding: 24px 20px;
+      }
+      .simple-content-section h1 {
+        font-size: 1.65rem;
+      }
+      .simple-content-section h2 {
+        font-size: 1.5rem;
+      }
+      .simple-content-section h3 {
+        font-size: 1.25rem;
+      }
+      .product-detail-hero {
+        padding: 120px 20px 35px 20px;
+      }
+      .product-hero-title {
+        font-size: 1.7rem;
+      }
+      .location-toggle-bar {
+        padding: 10px 18px;
+      }
+      .location-text {
+        font-size: 1.05rem;
+      }
+      .location-btn-badge {
+        padding: 5px 14px;
+        font-size: 0.8rem;
+      }
+      .location-content-panel {
+        padding: 18px 14px;
+      }
+          .location-columns-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px 24px;
+    }
+    .location-links-col {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    @media (max-width: 1024px) {
+      .location-columns-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px 20px;
+      }
+    }
+    @media (max-width: 640px) {
+      .location-columns-grid {
+        grid-template-columns: 1fr;
+        gap: 6px;
+      }
+      .location-link-item {
+        padding: 8px 8px;
+      }
+    }
+
+    .location-links-list {
+        grid-template-columns: 1fr;
+        gap: 8px;
+      }
+      .location-card {
+        padding: 16px 12px;
+      }
+    }
+  </style>
 </head>
 <body>
 
@@ -470,7 +915,150 @@
 
   <!-- Modern Unified Footer -->
   <!-- Modern Unified Footer -->
-<footer style="background: linear-gradient(180deg, #0e131f 0%, #080b12 100%); color: #e2e8f0; font-family: 'Poppins', sans-serif; padding: 60px 20px 24px; border-top: 1px solid rgba(255,255,255,0.08); position: relative; z-index: 10;">
+<!-- ==================== LOCATION DROPDOWN SECTION ==================== -->
+  <section class="location-dropdown-section" id="locationAccordionSection">
+    <div class="location-accordion-container">
+      <div class="location-accordion-wrapper" id="locationAccordion">
+        <!-- Accordion Header / Pill Bar -->
+        <button type="button" class="location-toggle-bar" id="locationToggleBtn" aria-expanded="false" aria-controls="locationPanel">
+          <div class="location-bar-title">
+            <span class="location-icon-badge">
+              <i class="fa-solid fa-location-dot"></i>
+            </span>
+            <span class="location-text">Location</span>
+          </div>
+          <span class="location-btn-badge" id="locationBtnText">
+            Expand <i class="fa-solid fa-chevron-down ms-1"></i>
+          </span>
+        </button>
+
+        <!-- Accordion Dropdown Content Panel -->
+        <div class="location-content-panel" id="locationPanel">
+          <div class="location-grid">
+            <!-- Pune Column -->
+            <div class="location-card">
+              <div class="location-card-header">
+                <i class="fa-solid fa-building me-2"></i>
+                <span>PUNE</span>
+              </div>
+              <div class="location-columns-grid">
+                <!-- Column 1 -->
+                <ul class="location-links-col">
+                  <li>
+                    <a href="printable-polycarbonate-sheets-supplier-distributor-in-pune.html" class="location-link-item">
+                      <span class="loc-link-left"><span class="loc-dot"></span> Printable Polycarbonate Sheets</span>
+                      <i class="fa-solid fa-arrow-right loc-arrow"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="adhesive-tapes-supplier-distributor-in-pune.html" class="location-link-item">
+                      <span class="loc-link-left"><span class="loc-dot"></span> Adhesive Tapes</span>
+                      <i class="fa-solid fa-arrow-right loc-arrow"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="transfer-tapes-supplier-distributor-in-pune.html" class="location-link-item">
+                      <span class="loc-link-left"><span class="loc-dot"></span> Transfer Tapes</span>
+                      <i class="fa-solid fa-arrow-right loc-arrow"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="non-tearable-sheets-supplier-distributor-in-pune.html" class="location-link-item">
+                      <span class="loc-link-left"><span class="loc-dot"></span> Non Tearable Sheets</span>
+                      <i class="fa-solid fa-arrow-right loc-arrow"></i>
+                    </a>
+                  </li>
+                </ul>
+                <!-- Column 2 -->
+                <ul class="location-links-col">
+                  <li>
+                    <a href="tissue-tapes-supplier-distributor-in-pune.html" class="location-link-item">
+                      <span class="loc-link-left"><span class="loc-dot"></span> Tissue Tapes</span>
+                      <i class="fa-solid fa-arrow-right loc-arrow"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="pp-rubber-screen-printing-inks-supplier-distributor-in-pune.html" class="location-link-item">
+                      <span class="loc-link-left"><span class="loc-dot"></span> PP / Rubber / Screen Printing Inks</span>
+                      <i class="fa-solid fa-arrow-right loc-arrow"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="polyester-meshes-supplier-distributor-in-pune.html" class="location-link-item">
+                      <span class="loc-link-left"><span class="loc-dot"></span> Polyester Mesh</span>
+                      <i class="fa-solid fa-arrow-right loc-arrow"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="polyester-tapes-supplier-distributor-in-pune.html" class="location-link-item">
+                      <span class="loc-link-left"><span class="loc-dot"></span> Polyester Tapes</span>
+                      <i class="fa-solid fa-arrow-right loc-arrow"></i>
+                    </a>
+                  </li>
+                </ul>
+                <!-- Column 3 -->
+                <ul class="location-links-col">
+                  <li>
+                    <a href="graphics-and-industrial-films-supplier-distributor-in-pune.html" class="location-link-item">
+                      <span class="loc-link-left"><span class="loc-dot"></span> Graphics & Industrial Films</span>
+                      <i class="fa-solid fa-arrow-right loc-arrow"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="vhb-and-uhb-tapes-supplier-distributor-in-pune.html" class="location-link-item">
+                      <span class="loc-link-left"><span class="loc-dot"></span> VHB & UHB Tapes</span>
+                      <i class="fa-solid fa-arrow-right loc-arrow"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="self-adhesive-vinyls-supplier-distributor-in-pune.html" class="location-link-item">
+                      <span class="loc-link-left"><span class="loc-dot"></span> Self Adhesive Vinyls</span>
+                      <i class="fa-solid fa-arrow-right loc-arrow"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="prepress-solutions-provider-in-pune.html" class="location-link-item">
+                      <span class="loc-link-left"><span class="loc-dot"></span> Pre Press Solutions</span>
+                      <i class="fa-solid fa-arrow-right loc-arrow"></i>
+                    </a>
+                  </li>
+                </ul>
+                <!-- Column 4 -->
+                <ul class="location-links-col">
+                  <li>
+                    <a href="customized-aluminium-screen-printing-frames-manufacturer-in-pune.html" class="location-link-item">
+                      <span class="loc-link-left"><span class="loc-dot"></span> Customized Aluminium Screen Printing Frames</span>
+                      <i class="fa-solid fa-arrow-right loc-arrow"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="aluminium-screen-frame-exposing-services-provider-in-pune.html" class="location-link-item">
+                      <span class="loc-link-left"><span class="loc-dot"></span> Aluminium Screen Frame Exposing Services</span>
+                      <i class="fa-solid fa-arrow-right loc-arrow"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="aluminium-screen-making-services-provider-in-pune.html" class="location-link-item">
+                      <span class="loc-link-left"><span class="loc-dot"></span> Aluminium Screen Making Services</span>
+                      <i class="fa-solid fa-arrow-right loc-arrow"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="customized-shade-matching-services-provider-in-pune.html" class="location-link-item">
+                      <span class="loc-link-left"><span class="loc-dot"></span> Customized Shade Matching Services</span>
+                      <i class="fa-solid fa-arrow-right loc-arrow"></i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer style="background: linear-gradient(180deg, #0e131f 0%, #080b12 100%); color: #e2e8f0; font-family: 'Poppins', sans-serif; padding: 60px 20px 24px; border-top: 1px solid rgba(255,255,255,0.08); position: relative; z-index: 10;">
   <div style="max-width: 1240px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 40px; align-items: start;">
 
     <!-- Col 1: Brand & About -->
@@ -535,6 +1123,41 @@
     <p>Premium Screen Printing Solutions & Industrial Materials</p>
   </div>
 </footer>
+
+  <!-- Accordion Toggle JavaScript (FluidTech style) -->
+  <script>
+    function initLocationAccordion() {
+      const toggleBtn = document.getElementById("locationToggleBtn");
+      const wrapper = document.getElementById("locationAccordion");
+      const btnText = document.getElementById("locationBtnText");
+
+      if (toggleBtn && wrapper && !toggleBtn.dataset.bound) {
+        toggleBtn.dataset.bound = "true";
+        toggleBtn.addEventListener("click", function(e) {
+          e.preventDefault();
+          const isOpen = wrapper.classList.toggle("open");
+          toggleBtn.setAttribute("aria-expanded", isOpen ? "true" : "false");
+          if (btnText) {
+            btnText.innerHTML = isOpen
+              ? 'Close <i class="fa-solid fa-chevron-up ms-1"></i>'
+              : 'Expand <i class="fa-solid fa-chevron-down ms-1"></i>';
+          }
+        });
+
+        if (window.location.hash === '#locationAccordionSection' || window.location.hash === '#location' || window.location.hash === '#locations') {
+          wrapper.classList.add('open');
+          toggleBtn.setAttribute('aria-expanded', 'true');
+          if (btnText) btnText.innerHTML = 'Close <i class="fa-solid fa-chevron-up ms-1"></i>';
+        }
+      }
+    }
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", initLocationAccordion);
+    } else {
+      initLocationAccordion();
+    }
+  </script>
+
 
 </body>
 </html>
