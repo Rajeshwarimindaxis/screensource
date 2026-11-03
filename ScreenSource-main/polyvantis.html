@@ -460,11 +460,11 @@
     display: none !important;
   }
 
-    /* ===================================================
+        /* ===================================================
        LOCATION DROPDOWN ACCORDION SECTION (FluidTech Style)
     =================================================== */
     .location-dropdown-section {
-      padding: 20px 20px 60px 20px;
+      padding: 25px 20px 60px 20px;
       width: 100%;
       box-sizing: border-box;
       background: #f8fafc;
@@ -473,6 +473,8 @@
     .location-accordion-container {
       max-width: 1200px;
       margin: 0 auto;
+      width: 100%;
+      box-sizing: border-box;
     }
 
     .location-accordion-wrapper {
@@ -527,13 +529,14 @@
       font-size: 1rem;
       color: #ffffff;
       backdrop-filter: blur(4px);
+      flex-shrink: 0;
     }
 
     .location-text {
       font-family: 'Poppins', sans-serif;
-      font-size: 1.18rem;
+      font-size: 1.15rem;
       font-weight: 700;
-      letter-spacing: 0.4px;
+      letter-spacing: 0.3px;
       color: #ffffff;
     }
 
@@ -550,6 +553,7 @@
       gap: 6px;
       backdrop-filter: blur(4px);
       transition: all 0.25s ease;
+      flex-shrink: 0;
     }
 
     .location-toggle-bar:hover .location-btn-badge {
@@ -585,6 +589,7 @@
       padding: 24px 28px;
       box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
       transition: all 0.3s ease;
+      box-sizing: border-box;
     }
 
     .location-card:hover {
@@ -596,6 +601,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      gap: 8px;
       font-family: 'Poppins', sans-serif;
       font-size: 1.2rem;
       font-weight: 800;
@@ -614,7 +620,7 @@
     .location-columns-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      gap: 16px 24px;
+      gap: 16px 20px;
     }
 
     .location-links-col {
@@ -623,23 +629,25 @@
       margin: 0;
       display: flex;
       flex-direction: column;
-      gap: 6px;
+      gap: 7px;
     }
 
     .location-link-item {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 9px 12px;
+      padding: 10px 14px;
       border-radius: 8px;
       text-decoration: none;
       color: #334155;
       font-size: 0.91rem;
       font-weight: 500;
-      transition: all 0.2s ease;
-      background: transparent;
-      border: 1px solid transparent;
+      transition: all 0.22s ease;
+      background: #ffffff;
+      border: 1px solid #E2E8F0;
+      min-height: 46px;
       box-sizing: border-box;
+      word-break: break-word;
     }
 
     .loc-link-left {
@@ -669,9 +677,10 @@
     .location-link-item:hover {
       background: #EFF6FF;
       color: #0077b6;
-      border-color: #BAE6FD;
+      border-color: #00AEEF;
       font-weight: 600;
-      transform: translateX(2px);
+      box-shadow: 0 4px 12px rgba(0, 174, 239, 0.1);
+      transform: translateY(-1px);
     }
 
     .location-link-item:hover .loc-dot {
@@ -700,39 +709,135 @@
       color: #00AEEF !important;
     }
 
+    /* ===================================================
+       RESPONSIVE BREAKPOINTS ACROSS VARIOUS DEVICES
+    =================================================== */
+    /* Laptops & Landscape Tablets (1024px and below) */
     @media (max-width: 1024px) {
       .location-columns-grid {
         grid-template-columns: repeat(2, 1fr);
-        gap: 16px 20px;
+        gap: 14px 18px;
+      }
+      .location-card {
+        padding: 20px 22px;
+      }
+      .location-card-header {
+        font-size: 1.15rem;
+        margin-bottom: 18px;
+        padding-bottom: 12px;
       }
     }
 
+    /* Tablets & Large Phones (768px and below) */
     @media (max-width: 768px) {
+      .location-dropdown-section {
+        padding: 18px 14px 45px 14px;
+      }
       .location-toggle-bar {
-        padding: 10px 18px;
+        padding: 11px 20px;
+      }
+      .location-icon-badge {
+        width: 32px;
+        height: 32px;
+        font-size: 0.9rem;
       }
       .location-text {
-        font-size: 1.05rem;
+        font-size: 1.02rem;
       }
       .location-btn-badge {
         padding: 5px 14px;
         font-size: 0.8rem;
       }
       .location-content-panel {
-        padding: 18px 14px;
+        padding: 16px 14px;
       }
       .location-card {
         padding: 16px 14px;
+        border-radius: 14px;
+      }
+      .location-card-header {
+        font-size: 1.1rem;
+        margin-bottom: 16px;
+        padding-bottom: 10px;
+      }
+      .location-columns-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px 14px;
+      }
+      .location-links-col {
+        gap: 6px;
+      }
+      .location-link-item {
+        padding: 8px 10px;
+        font-size: 0.85rem;
+        min-height: 42px;
+        border-radius: 7px;
+      }
+      .loc-link-left {
+        gap: 8px;
+      }
+      .loc-dot {
+        width: 6px;
+        height: 6px;
+      }
+      .loc-arrow {
+        font-size: 0.75rem;
       }
     }
 
-    @media (max-width: 640px) {
+    /* Mobile Phones (480px and below) */
+    @media (max-width: 480px) {
+      .location-dropdown-section {
+        padding: 12px 10px 35px 10px;
+      }
+      .location-toggle-bar {
+        padding: 10px 16px;
+        border-radius: 40px;
+      }
+      .location-accordion-wrapper.open .location-toggle-bar {
+        border-radius: 14px 14px 0 0;
+      }
+      .location-bar-title {
+        gap: 8px;
+      }
+      .location-icon-badge {
+        width: 28px;
+        height: 28px;
+        font-size: 0.8rem;
+      }
+      .location-text {
+        font-size: 0.92rem;
+        letter-spacing: 0.2px;
+      }
+      .location-btn-badge {
+        padding: 4px 10px;
+        font-size: 0.75rem;
+        gap: 4px;
+      }
+      .location-content-panel {
+        padding: 12px 8px;
+        border-radius: 0 0 14px 14px;
+      }
+      .location-card {
+        padding: 14px 10px;
+        border-radius: 12px;
+      }
+      .location-card-header {
+        font-size: 1.05rem;
+        margin-bottom: 12px;
+        padding-bottom: 8px;
+      }
       .location-columns-grid {
         grid-template-columns: 1fr;
         gap: 6px;
       }
+      .location-links-col {
+        gap: 6px;
+      }
       .location-link-item {
-        padding: 8px 8px;
+        padding: 9px 12px;
+        font-size: 0.88rem;
+        min-height: 44px;
       }
     }
 
@@ -1311,6 +1416,40 @@
       if (startX - endX > 50) rightBtn.click();
       if (endX - startX > 50) leftBtn.click();
     });
+  </script>
+
+  <!-- Accordion Toggle JavaScript (FluidTech style) -->
+  <script>
+    function initLocationAccordion() {
+      const toggleBtn = document.getElementById("locationToggleBtn");
+      const wrapper = document.getElementById("locationAccordion");
+      const btnText = document.getElementById("locationBtnText");
+
+      if (toggleBtn && wrapper && !toggleBtn.dataset.bound) {
+        toggleBtn.dataset.bound = "true";
+        toggleBtn.addEventListener("click", function(e) {
+          e.preventDefault();
+          const isOpen = wrapper.classList.toggle("open");
+          toggleBtn.setAttribute("aria-expanded", isOpen ? "true" : "false");
+          if (btnText) {
+            btnText.innerHTML = isOpen
+              ? 'Close <i class="fa-solid fa-chevron-up ms-1"></i>'
+              : 'Expand <i class="fa-solid fa-chevron-down ms-1"></i>';
+          }
+        });
+
+        if (window.location.hash === '#locationAccordionSection' || window.location.hash === '#location' || window.location.hash === '#locations' || window.location.hash === '#locations-we-serve') {
+          wrapper.classList.add('open');
+          toggleBtn.setAttribute('aria-expanded', 'true');
+          if (btnText) btnText.innerHTML = 'Close <i class="fa-solid fa-chevron-up ms-1"></i>';
+        }
+      }
+    }
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", initLocationAccordion);
+    } else {
+      initLocationAccordion();
+    }
   </script>
 
 </body>
